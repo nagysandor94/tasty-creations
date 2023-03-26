@@ -1,4 +1,4 @@
-package se.backend;
+package se.backend.RecipeObject;
 
 import java.util.ArrayList;
 

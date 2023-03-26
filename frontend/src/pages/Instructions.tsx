@@ -5,15 +5,12 @@ import {ExtendedIngredient, RecipeModel} from "../model/RecipeModel";
 
 
 
-const IngredientItem = (props:ExtendedIngredient) => {
-    const data=props;
+const Instructions = ({ name }: { name: string }) => {
+    const data=name;
 
     return(
-        <div className='ingredientItem'>
-            <text>{data.name}</text>
-            <text>{data.amount}</text>
-        </div>
+        <li>{data}</li>
     )
 }
 
-export default IngredientItem;
+export default Instructions;

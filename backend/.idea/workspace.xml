@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dbae058-c8c6-4329-8bf7-357451cba4f5" name="Changes" comment="" />
+    <list default="true" id="5dbae058-c8c6-4329-8bf7-357451cba4f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/ExtendedIngredient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RandomRecipeObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/Recipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Styling/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Styling/Home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Styling/RandomRecipe.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Styling/ingredientItem.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/model/RecipeModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/IngredientItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/Instructions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/RandomRecipeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Home.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,24 +64,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/salt-dev/Documents/tasty-creations/backend/pom.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/salt-dev/Documents/tasty-creations/backend/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="se.backend.RecipeObject" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
+    <configuration name="BackendApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.backend" />
+      <option name="MAIN_CLASS_NAME" value="se.backend.BackendApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="se.backend.BackendApplication" />
@@ -67,6 +109,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BackendApplicationTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -1,7 +1,8 @@
 .App {
   text-align: center;
+  background-color: whitesmoke;
 }
-h1{
+.appHeader{
   text-align: center;
   font-family: Avenir;
 }
@@ -14,6 +15,9 @@ h1{
 /*}*/
 
 .pageBanner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -21,11 +25,11 @@ h1{
 
 }
 
-li {
+.listBanner {
   float: left;
 }
 
-li a {
+.linkBanner {
   display: block;
   padding: 8px;
   background-color: lightblue;
@@ -42,16 +46,16 @@ li a {
 /*  }*/
 /*}*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*.App-header {*/
+/*  background-color: #282c34;*/
+/*  min-height: 100vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  font-size: calc(10px + 2vmin);*/
+/*  color: white;*/
+/*}*/
 
 /*.App-link {*/
 /*  color: #61dafb;*/

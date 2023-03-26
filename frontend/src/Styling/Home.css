@@ -1,0 +1,13 @@
+.card{
+    list-style-type: none;
+    margin-bottom: 3%;
+    margin-right: 9%;
+    background-color: white;
+    padding: 3%;
+}
+
+.homePageCards{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
