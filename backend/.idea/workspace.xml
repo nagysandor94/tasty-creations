@@ -5,27 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dbae058-c8c6-4329-8bf7-357451cba4f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/ExtendedIngredient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RandomRecipeObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/Recipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Styling/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Styling/Home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Styling/RandomRecipe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Styling/ingredientItem.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/model/RecipeModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/IngredientItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/Instructions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/RandomRecipeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/InstructionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/InstructionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/ExtendedIngredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/ExtendedIngredient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/model/RecipeModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/model/RecipeModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/IngredientItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/IngredientItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

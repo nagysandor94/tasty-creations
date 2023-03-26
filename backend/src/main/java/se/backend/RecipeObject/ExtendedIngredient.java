@@ -13,4 +13,23 @@ public class ExtendedIngredient {
     public String unitLong;
     public String originalString;
     public ArrayList<String> metaInformation;
+
+    public Measures measures;
+}
+
+ class Measures{
+    public Us us;
+    public Metric metric;
+}
+
+ class Metric{
+    public double amount;
+    public String unitShort;
+    public String unitLong;
+}
+
+class Us{
+    public double amount;
+    public String unitShort;
+    public String unitLong;
 }

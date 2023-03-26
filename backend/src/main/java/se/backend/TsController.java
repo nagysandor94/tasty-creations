@@ -2,10 +2,7 @@ package se.backend;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import se.backend.RecipeObject.RandomRecipeDTO;
 
 import java.io.IOException;
@@ -21,5 +18,4 @@ public class TsController {
     public ResponseEntity<RandomRecipeDTO> getRandomRecipe() throws IOException, InterruptedException {
         return  ResponseEntity.ok(service.getRandomRecipe());
     }
-
 }
