@@ -16,6 +16,7 @@ const IngredientItem = (props:ExtendedIngredient) => {
             <img className="ingredientImage" src={imgUrl}></img>
             <br/>
             <text className="ingredientAmount">{data.amount}</text>
+            <text>{data.measures.metric.unitShort}</text>
         </div>
     )
 }

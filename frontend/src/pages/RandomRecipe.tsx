@@ -34,7 +34,7 @@ const RandomRecipe = () => {
                                                                    name={item.name} amount={item.amount} unit={item.unit}
                                                                    unitShort={item.unitShort} unitLong={item.unitLong}
                                                                    originalString={item.originalString}
-                                                                   metaInformation={item.metaInformation}/>)}
+                                                                   metaInformation={item.metaInformation} measures={item.measures}/>)}
             </div>
             <h4>Instructions</h4>
             <ol className="instructionsList">
