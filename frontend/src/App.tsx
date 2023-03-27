@@ -8,6 +8,7 @@ import About from './pages/About';
 import Favorites from './pages/Favorites';
 import RandomRecipe from "./pages/RandomRecipe";
 import SearchRecipe from './pages/SearchRecipe';
+import Recipe from './pages/Recipe';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/Favorites' element={<Favorites/>}> </Route>
           <Route path='/randomrecipe' element={<RandomRecipe/>}></Route>
           <Route path='/byrecipe' element={<SearchRecipe/>}></Route>
+          <Route path='/recipe/:id' element={<Recipe />}></Route>
       </Routes>
     </div>
   );

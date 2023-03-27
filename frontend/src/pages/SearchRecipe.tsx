@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { SearchRecipeResponse } from "../model/RecipeModel";
 
 const SearchRecipe = () => {
@@ -38,10 +39,14 @@ const SearchRecipe = () => {
 
             <div>
                 {responseSearch?.results.map((response) => {
-                    return (<div key={response.id}><img key={response.id} src={response.image} alt="Avatar" />
-                    <div>
-                        <h4 key={response.id}>{response.title}</h4>
-                    </div>
+                    return (<div key={response.id}>
+                        <Link to={`recipe/${response.id}`}>
+                        <img key={response.id} src={response.image} alt="Avatar" />
+                        <div>
+                            
+                            <h4 key={response.id}>{response.title}</h4>
+                        </div>
+                        </Link>
                     </div>)
                 })}
             </div>
