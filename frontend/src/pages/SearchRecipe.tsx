@@ -40,7 +40,7 @@ const SearchRecipe = () => {
             <div>
                 {responseSearch?.results.map((response) => {
                     return (<div key={response.id}>
-                        <Link to={`recipe/${response.id}`}>
+                        <Link to={`/recipe/${response.id}`}>
                         <img key={response.id} src={response.image} alt="Avatar" />
                         <div>
                             
@@ -50,12 +50,6 @@ const SearchRecipe = () => {
                     </div>)
                 })}
             </div>
-            {/* <img src={responseSearch?.results.map} alt="Avatar" />
-                    <div className='container'>
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
-                    </div>
-            </div> */}
         </>
     )
 }

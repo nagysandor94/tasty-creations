@@ -140,6 +140,13 @@ public class TsService {
                 .build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
         Recipe recipe = mapper.readValue(response.body(), Recipe.class);
+//        String jsonResponse = """
+//
+//
+//                """;
+//
+//
+//        Recipe recipe = mapper.readValue(jsonResponse, Recipe.class);
         return recipe;
 
     }
