@@ -4,9 +4,13 @@ import axios from "axios";
 import IngredientItem from "./IngredientItem";
 import Instructions from "./Instructions";
 import '../Styling/RandomRecipe.css';
+import addToFav from "../images/AddToFav.png";
+import addedToFav from "../images/AddedToFav.png";
+
 const RandomRecipe = () => {
     const [recipe,setRecipe]=useState<RecipeModel>();
     const [instructionList,setInstructionList]=useState<string[]>([]);
+    const [isInFav,setIsInFav]=useState<boolean>(false);
 
     function getRandomRecipe() {
         axios.get<RecipeModel>('http://localhost:8080/api/random')
@@ -21,12 +25,25 @@ const RandomRecipe = () => {
         getRandomRecipe();
     },[]);
 
+    function addRecipeToFavorite() {
+        axios.post("http://localhost:8080/api/addfavorite",recipe);
+        setIsInFav(true);
+    }
+
+    function removeRecipeFromFavorite() {
+        setIsInFav(false);
+    }
+
     return(
         <div className='randomRecipe'>
             <h1>RandomRecipe</h1>
             <div className="recipeHeading">
             <img className="recipeImage" src={recipe?.image}></img>
                 <div className="recipeName">{recipe?.title}</div>
+                <img className="iconFavorite" src={addToFav} onClick={addRecipeToFavorite}></img>
+                {isInFav &&
+                <img className="iconFavorite" src={addedToFav} onClick={removeRecipeFromFavorite}></img>
+                }
             </div>
             <h4>Ingredients</h4>
             <div className="ingredientsList">
