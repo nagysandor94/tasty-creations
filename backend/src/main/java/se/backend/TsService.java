@@ -67,9 +67,80 @@ public class TsService {
                 .build();
 
         ObjectMapper objectMapper = new ObjectMapper();
-        HttpResponse<String> jsonString = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        ListResponseSearchByName listResponseSearchByName = objectMapper.readValue(jsonString.body(), ListResponseSearchByName.class);
+
+        String jsonResponse = """
+                {
+                    "results": [
+                        {
+                            "id": "247730",
+                            "title": "Lasagna",
+                            "image": "https://spoonacular.com/recipeImages/247730-312x231.jpg"
+                        },
+                        {
+                            "id": "544052",
+                            "title": "Lasagna",
+                            "image": "https://spoonacular.com/recipeImages/544052-312x231.jpg"
+                        },
+                        {
+                            "id": "808433",
+                            "title": "Lasagna",
+                            "image": "https://spoonacular.com/recipeImages/808433-312x231.jpg"
+                        },
+                        {
+                            "id": "107361",
+                            "title": "Lasagna",
+                            "image": "https://spoonacular.com/recipeImages/107361-312x231.png"
+                        },
+                        {
+                            "id": "485445",
+                            "title": "Lasagna",
+                            "image": "https://spoonacular.com/recipeImages/485445-312x231.jpg"
+                        },
+                        {
+                            "id": "389775",
+                            "title": "Lasagna",
+                            "image": "https://spoonacular.com/recipeImages/389775-312x231.jpeg"
+                        },
+                        {
+                            "id": "326698",
+                            "title": "Lasagna",
+                            "image": "https://spoonacular.com/recipeImages/326698-312x231.jpeg"
+                        },
+                        {
+                            "id": "566186",
+                            "title": "Lasagna Dip",
+                            "image": "https://spoonacular.com/recipeImages/566186-312x231.jpg"
+                        },
+                        {
+                            "id": "627701",
+                            "title": "Lasagna Dip",
+                            "image": "https://spoonacular.com/recipeImages/627701-312x231.jpg"
+                        },
+                        {
+                            "id": "248684",
+                            "title": "Lasagna Dip",
+                            "image": "https://spoonacular.com/recipeImages/248684-312x231.jpg"
+                        }
+                    ]
+                }
+                """;
+//        HttpResponse<String> jsonString = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+//        ListResponseSearchByName listResponseSearchByName = objectMapper.readValue(jsonString.body(), ListResponseSearchByName.class);
+        ListResponseSearchByName listResponseSearchByName = objectMapper.readValue(jsonResponse, ListResponseSearchByName.class);
         return listResponseSearchByName;
+
+    }
+
+    public Object getRecipeById(String id) throws IOException, InterruptedException {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" + id + "/information"))
+                .header("X-RapidAPI-Key", "c7f6134871msh0d414c4956237b2p181154jsn2becb126a6e3")
+                .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+                .method("GET", HttpRequest.BodyPublishers.noBody())
+                .build();
+        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+        
+
 
     }
 }

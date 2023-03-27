@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dbae058-c8c6-4329-8bf7-357451cba4f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/ListResponseSearchByName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/ResponseSearchByName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" afterDir="false" />
@@ -29,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -114,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679664605523</updated>
       <workItem from="1679664607350" duration="4213000" />
-      <workItem from="1679906074150" duration="6247000" />
+      <workItem from="1679906074150" duration="13915000" />
     </task>
     <servers />
   </component>

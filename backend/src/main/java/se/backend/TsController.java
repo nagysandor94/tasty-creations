@@ -8,7 +8,7 @@ import se.backend.RecipeObject.RandomRecipeDTO;
 import java.io.IOException;
 
 @RestController
-@CrossOrigin
+@CrossOrigin("*")
 @RequestMapping("/api")
 public class TsController {
     @Autowired
@@ -23,6 +23,11 @@ public class TsController {
     @GetMapping("/searchrecipebyname")
     public ResponseEntity<ListResponseSearchByName> getRecipeByName(@RequestParam String query) throws IOException, InterruptedException {
         return ResponseEntity.ok(service.searchRecipeByName(query));
+    }
+
+    @GetMapping("getrecipe/{id}")
+    public ResponseEntity<> getRecipeById(@PathVariable String id) throws IOException, InterruptedException {
+        return ResponseEntity.ok(service.getRecipeById(id));
     }
 
     @PostMapping("/addfavorite")

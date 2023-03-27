@@ -36,3 +36,13 @@ export interface Metric {
     unitShort: string
     unitLong: string
 }
+
+export interface SearchRecipeResponse {
+    results: Result[];
+}
+
+export interface Result {
+    id:    string;
+    title: string;
+    image: string;
+}
