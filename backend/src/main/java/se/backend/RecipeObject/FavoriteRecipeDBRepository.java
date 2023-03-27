@@ -1,6 +1,6 @@
-package se.backend.Repository;
+package se.backend.RecipeObject;
 import org.springframework.data.repository.CrudRepository;
-import se.backend.RecipeObject.FavoriteRecipe;
+
 
 public interface FavoriteRecipeDBRepository extends CrudRepository<FavoriteRecipe,Long>{
 }

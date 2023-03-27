@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import se.backend.RecipeObject.RandomRecipeDTO;
 import se.backend.RecipeObject.RandomRecipeObject;
 import se.backend.RecipeObject.Recipe;
+import se.backend.RecipeObject.FavoriteRecipeRepository;
 
-import java.io.Console;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -19,6 +19,9 @@ import java.net.http.HttpResponse;
 public class TsService {
         @Autowired
         ObjectMapper mapper = new ObjectMapper();
+
+        @Autowired
+        FavoriteRecipeRepository repo;
         public RandomRecipeDTO getRandomRecipe() throws IOException, InterruptedException {
 //            HttpRequest request = HttpRequest.newBuilder()
 //                    .uri(URI.create("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?tags=vegetarian%2Cdessert&number=1"))
@@ -28,7 +31,7 @@ public class TsService {
 //                    .build();
 //            HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
 //            String jsonBody=response.body();
-//
+
 
 //Hardcoded Json to prevent number of calls to external API
 
@@ -43,4 +46,12 @@ public class TsService {
                     recipe.instructions.replaceAll("<[^>]*>", ""),recipe.image);
         }
 
+    public boolean addRecipeToFavorite(RandomRecipeDTO newRecipe) {
+    repo.AddFavorite(newRecipe.id(),newRecipe.title(),newRecipe.image());
+    return true;
+    }
+
+    public boolean recipeInFavorites(Integer id) {
+            return repo.recipeInFavoriets(id);
+    }
 }

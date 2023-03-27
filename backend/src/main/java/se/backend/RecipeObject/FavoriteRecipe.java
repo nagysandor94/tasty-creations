@@ -1,6 +1,9 @@
-package se.backend.Repository;
-import javax.persistence.*;
+package se.backend.RecipeObject;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name="favorite_recipes")

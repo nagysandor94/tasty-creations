@@ -1,11 +1,22 @@
-package se.backend.Repository;
+package se.backend.RecipeObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class FavoriteRecipeRepository {
+
     private FavoriteRecipeDBRepository dbRepo;
 
-    public boolean AddFavorite(Integer id, String title, String image) {
+    public FavoriteRecipeRepository(FavoriteRecipeDBRepository dbRepo) {
+        this.dbRepo = dbRepo;
+    }
 
+    public FavoriteRecipe AddFavorite(Integer id, String title, String image) {
+        FavoriteRecipe newFavRec = new FavoriteRecipe(id,title,image);
+        return dbRepo.save(newFavRec);
+    }
+
+    public boolean recipeInFavoriets(Integer id) {
+        return dbRepo.existsById(Long.valueOf(id));
     }
 }
