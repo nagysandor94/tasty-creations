@@ -131,7 +131,7 @@ public class TsService {
 
     }
 
-    public Object getRecipeById(String id) throws IOException, InterruptedException {
+    public Recipe getRecipeById(String id) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" + id + "/information"))
                 .header("X-RapidAPI-Key", "c7f6134871msh0d414c4956237b2p181154jsn2becb126a6e3")
@@ -139,8 +139,8 @@ public class TsService {
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        
-
+        Recipe recipe = mapper.readValue(response.body(), Recipe.class);
+        return recipe;
 
     }
 }

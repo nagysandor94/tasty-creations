@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import se.backend.RecipeObject.ListResponseSearchByName;
 import se.backend.RecipeObject.RandomRecipeDTO;
+import se.backend.RecipeObject.Recipe;
 
 import java.io.IOException;
 
@@ -26,7 +27,7 @@ public class TsController {
     }
 
     @GetMapping("getrecipe/{id}")
-    public ResponseEntity<> getRecipeById(@PathVariable String id) throws IOException, InterruptedException {
+    public ResponseEntity<Recipe> getRecipeById(@PathVariable String id) throws IOException, InterruptedException {
         return ResponseEntity.ok(service.getRecipeById(id));
     }
 
