@@ -2,11 +2,10 @@ package se.backend;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import se.backend.RecipeObject.ListResponseSearchByName;
-import se.backend.RecipeObject.RandomRecipeDTO;
-import se.backend.RecipeObject.Recipe;
+import se.backend.RecipeObject.*;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 @CrossOrigin("*")
@@ -24,6 +23,11 @@ public class TsController {
     @GetMapping("/searchrecipebyname")
     public ResponseEntity<ListResponseSearchByName> getRecipeByName(@RequestParam String query) throws IOException, InterruptedException {
         return ResponseEntity.ok(service.searchRecipeByName(query));
+    }
+
+    @GetMapping("/findbyingredients")
+    public ResponseEntity<List<ResponseSearchByName>> getRecipeByIngredients(@RequestParam String query) throws IOException, InterruptedException {
+        return ResponseEntity.ok(service.searchRecipeByIngredients(query));
     }
 
     @GetMapping("getrecipe/{id}")

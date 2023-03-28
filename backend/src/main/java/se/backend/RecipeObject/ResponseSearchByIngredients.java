@@ -3,14 +3,12 @@ package se.backend.RecipeObject;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public record ResponseSearchByName(
-        @JsonProperty("id")
-        String id,
+import java.util.List;
 
-        @JsonProperty("title")
-        String title,
-        @JsonProperty("image")
-        String image
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record ResponseSearchByIngredients(
+
+        @JsonProperty("")
+        List<ResponseSearchByName> results
 ) {
 }
