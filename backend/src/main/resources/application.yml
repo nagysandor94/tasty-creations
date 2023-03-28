@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:postgresql://rogue.db.elephantsql.com:5432/rdijxiwm
     username: rdijxiwm
-    password: dtOEGUuhdVLHhw2OSU93rNkMIbvxy7ik
+    password: tsY3OLBTDpoNnRDsNVFT2UVh9hXXfiO6
   jpa:
     defer-datasource-initialization: false
     hibernate:
