@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { IIngredients } from '../model/RecipeModel';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { IIngredients, Result } from '../model/RecipeModel';
 
 
 const SearchByIngredient = () => {
@@ -7,14 +9,10 @@ const SearchByIngredient = () => {
 
     const [ingredients, setIngredients] = useState<IIngredients[]>([]);
 
-    const [showEdit, setShowEdit] = useState(-1);
-    const [updatedText, setUpdatedText] = useState<string>("");
+    const [responseSearch, setSearchResponse] = useState<Result[]>();
 
-    // Helper Functions
 
-    /* Adds a new item to the list array*/
-    function addItem() {
-        // ! Check for empty item
+    function addIngredient() {
         if (!newIngredient) {
             alert("Press enter an ingredient.");
             return;
@@ -25,12 +23,28 @@ const SearchByIngredient = () => {
             ingredientName: newIngredient,
         };
 
-        // Add new item to items array
         setIngredients((oldList) => [...oldList, ingredient]);
 
-        // Reset newItem back to original state
         setNewIngredient("");
     }
+
+    function searchRecipe() {
+        let queryParam :string = ingredients.map((ingredient) => ingredient.ingredientName).toString();
+        console.log(queryParam);
+        axios.get('http://localhost:8080/api/findbyingredients', {
+            params: {
+                query: queryParam
+            }
+        })
+            .then(response => {
+                setSearchResponse(response.data);
+                console.log(responseSearch);
+            });
+
+    }
+
+    useEffect(() => {
+    }, [setSearchResponse]);
 
     /* Deletes an item based on the `item.id` key */
     function deleteItem(id:number) {
@@ -59,8 +73,8 @@ const SearchByIngredient = () => {
 
     // Main part of app
     return (
-        <div className="app">
-            {/* 1. Header  */}
+        <>
+        <div className="ingredientList">
             <h1>What's in your fridge?</h1>
             <p>Add a new ingredient to your list!</p>
 
@@ -72,13 +86,13 @@ const SearchByIngredient = () => {
             />
 
             {/* Add (button) */}
-            <button onClick={() => addItem()}>Add</button>
+            <button onClick={() => addIngredient()}>Add</button>
 
             {/* 3. List of todos (unordered list) */}
             <ul>
                 {ingredients.map((ingredient) => {
                     return (
-                        <div>
+                        <div key={ingredient.ingredientId}>
                             <li key={ingredient.ingredientId} >
                                 {ingredient.ingredientName}
                                 <button
@@ -92,7 +106,23 @@ const SearchByIngredient = () => {
                     );
                 })}
             </ul>
+            <button onClick={() => searchRecipe()}>Search recipes by ingredients</button>
+
         </div>
+        <div>
+                {responseSearch?.map((response) => {
+                    return (<div key={response.id}>
+                        <Link to={`/recipe/${response.id}`}>
+                        <img key={response.id} src={response.image} alt="Avatar" />
+                        <div>
+                            
+                            <h4 key={response.id}>{response.title}</h4>
+                        </div>
+                        </Link>
+                    </div>)
+                })}
+            </div>
+        </>
     );
 }
 
