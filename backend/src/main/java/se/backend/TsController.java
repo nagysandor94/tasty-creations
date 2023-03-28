@@ -22,7 +22,7 @@ public class TsController {
 
 
     @GetMapping("/searchrecipebyname")
-    public ResponseEntity<ListResponseSearchByName> getRecipeByName(@RequestParam String query) throws IOException, InterruptedException {
+    public ResponseEntity<ListResponseSearchByName> getRecipeByName(@RequestParam String query) throws IOException, InterruptedException, URISyntaxException {
         return ResponseEntity.ok(service.searchRecipeByName(query));
     }
 
@@ -32,7 +32,7 @@ public class TsController {
     }
 
     @GetMapping("getrecipe/{id}")
-    public ResponseEntity<Recipe> getRecipeById(@PathVariable String id) throws IOException, InterruptedException {
+    public ResponseEntity<Recipe> getRecipeById(@PathVariable String id) throws IOException, InterruptedException, URISyntaxException {
         return ResponseEntity.ok(service.getRecipeById(id));
     }
 

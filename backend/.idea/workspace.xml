@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" afterDir="false" />
     </list>
@@ -42,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/salt-dev/Documents/tasty-creations/backend/src/test",
+    "last_opened_file_path": "/Users/salt-dev/Documents/tasty-creations/backend/pom.xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,10 +91,10 @@
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
         <env name="API_KEY_I" value="16c3ec98bcmshd183df0ce8c7e74p1efae2jsn6b1abdcdf768" />
-        <env name="DB_PW" value="tsY3OLBTDpoNnRDsNVFT2UVh9hXXfiO6" />
-        <env name="DB_URL" value="jdbc:postgresql://rogue.db.elephantsql.com:5432/rdijxiwm" />
-        <env name="DB_USER" value="rdijxiwm" />
         <env name="API_KEY_S" value="c7f6134871msh0d414c4956237b2p181154jsn2becb126a6e3" />
+        <env name="DB_PW" value="jTBLpBSh8vNrnLYnE7gkCIiLBcHE42QK" />
+        <env name="DB_URL" value="jdbc:postgresql://mouse.db.elephantsql.com:5432/ebypfghn" />
+        <env name="DB_USER" value="ebypfghn" />
       </envs>
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="se.backend.BackendApplication" />
@@ -129,7 +128,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679993770755</updated>
-      <workItem from="1679993772454" duration="13549000" />
+      <workItem from="1679993772454" duration="15579000" />
+      <workItem from="1680023722170" duration="964000" />
     </task>
     <servers />
   </component>

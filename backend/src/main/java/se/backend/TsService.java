@@ -67,16 +67,22 @@ public class TsService {
         return repo.recipeInFavoriets(id);
     }
 
-    public ListResponseSearchByName searchRecipeByName(String query) throws IOException, InterruptedException {
-        RestTemplate restTemplate = new RestTemplate();
+    public ListResponseSearchByName searchRecipeByName(String query) throws IOException, InterruptedException, URISyntaxException {
+        String apiKey = "9d5d4fbeee6a4046a0a0bda36a37fcec";
+
+        URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/complexSearch");
+        uriBuilder.addParameter("apiKey", apiKey);
+        //uriBuilder.addParameter("number", "2");
+        uriBuilder.addParameter("query", query);
+
+
+
+
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query="+query))
-                .header("X-RapidAPI-Key", apiKeyS)
-                .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+                .uri(uriBuilder.build())
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
 
-        ObjectMapper objectMapper = new ObjectMapper();
 //
 //        String jsonResponse = """
 //                {
@@ -135,32 +141,24 @@ public class TsService {
 //                }
 //                """;
         HttpResponse<String> jsonString = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        ListResponseSearchByName listResponseSearchByName = objectMapper.readValue(jsonString.body(), ListResponseSearchByName.class);
+        ListResponseSearchByName listResponseSearchByName = mapper.readValue(jsonString.body(), ListResponseSearchByName.class);
        // ListResponseSearchByName listResponseSearchByName = objectMapper.readValue(jsonResponse, ListResponseSearchByName.class);
         return listResponseSearchByName;
 
     }
 
-    public Recipe getRecipeById(String id) throws IOException, InterruptedException {
+    public Recipe getRecipeById(String id) throws IOException, InterruptedException, URISyntaxException {
+        String apiKey = "9d5d4fbeee6a4046a0a0bda36a37fcec";
 
-
-
-
+        URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/" + id + "/information");
+        uriBuilder.addParameter("apiKey", apiKey);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" + id + "/information"))
-                .header("X-RapidAPI-Key", apiKeyS)
-                .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
+                .uri(uriBuilder.build())
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
         Recipe recipe = mapper.readValue(response.body(), Recipe.class);
-//        String jsonResponse = """
-//
-//
-//                """;
-//
-//
-//        Recipe recipe = mapper.readValue(jsonResponse, Recipe.class);
+
         return recipe;
 
     }
