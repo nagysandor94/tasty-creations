@@ -7,11 +7,13 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Favorites from './pages/Favorites';
 import RandomRecipe from "./pages/RandomRecipe";
+import background from "../images/bkgrnd.png";
 
 
 function App() {
   return (
     <div className="App">
+
         <h1 className='appHeader'>TASTY CREATIONS</h1>
         <ul className='pageBanner'>
             <li className='listBanner'><a className='linkBanner' href="/">Home</a></li>

@@ -6,6 +6,9 @@ import Instructions from "./Instructions";
 import '../Styling/RandomRecipe.css';
 import addToFav from "../images/AddToFav.png";
 import addedToFav from "../images/AddedToFav.png";
+import nextIcon from "../images/NextIcon.png";
+
+
 
 const RandomRecipe = () => {
     const [recipe,setRecipe]=useState<RecipeModel>();
@@ -17,6 +20,7 @@ const RandomRecipe = () => {
             .then(response=>{
                 setRecipe(response.data);
                 setInstructionList(response.data.instructions.split("."));
+                setIsInFav(response.data.isInFav);
                 console.log(response.data);
             });
     }
@@ -31,6 +35,8 @@ const RandomRecipe = () => {
     }
 
     function removeRecipeFromFavorite() {
+        let url="http://localhost:8080/api/removefavorite/"+recipe?.id;
+        axios.delete(url);
         setIsInFav(false);
     }
 
@@ -44,6 +50,7 @@ const RandomRecipe = () => {
                 {isInFav &&
                 <img className="iconFavorite" src={addedToFav} onClick={removeRecipeFromFavorite}></img>
                 }
+                <img className="nextIcon" src={nextIcon} onClick={getRandomRecipe}></img>
             </div>
             <h4>Ingredients</h4>
             <div className="ingredientsList">
@@ -57,7 +64,9 @@ const RandomRecipe = () => {
             <ol className="instructionsList">
             {instructionList.map(item=><Instructions name={item}/>)}
             </ol>
+            <img className="recipeImageFooter" src={recipe?.image}></img>
             </div>
+
     );
 }
 

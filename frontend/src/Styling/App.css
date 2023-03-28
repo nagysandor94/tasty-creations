@@ -1,11 +1,11 @@
 .App {
   text-align: center;
-  background-color: whitesmoke;
 }
 .appHeader{
   text-align: center;
   font-family: Avenir;
 }
+
 /*ul {*/
 /*  list-style-type: none;*/
 /*  margin: 0;*/
