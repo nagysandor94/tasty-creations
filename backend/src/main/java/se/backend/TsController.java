@@ -17,11 +17,20 @@ public class TsController {
     public ResponseEntity<RandomRecipeDTO> getRandomRecipe() throws IOException, InterruptedException {
         return  ResponseEntity.ok(service.getRandomRecipe());
     }
+
+
     @PostMapping("/addfavorite")
     public ResponseEntity<Object> addRecipeToFavorites(@RequestBody RandomRecipeDTO newRecipe){
         if(!recipeInFavorites(newRecipe.id()))
             service.addRecipeToFavorite(newRecipe);
         return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/removefavorite/{recipeID}")
+    public ResponseEntity<Object> removeFavorite(@PathVariable int recipeID){
+        if (recipeInFavorites(recipeID))
+            service.removeRecipe(recipeID);
+    return ResponseEntity.noContent().build();
     }
 
     private boolean recipeInFavorites(Integer id) {

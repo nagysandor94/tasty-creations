@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ef4463d-557c-426a-a111-6128f57c6c6d" name="Changes" comment="&quot;Random front end&quot;">
-      <change afterPath="$PROJECT_DIR$/src/Styling/About.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/AppBackground.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/NextIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/recipe.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/FavoriteRecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/FavoriteRecipeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RecipeModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecipeModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +82,7 @@
       <workItem from="1679760190006" duration="4901000" />
       <workItem from="1679774170481" duration="40333000" />
       <workItem from="1679937776066" duration="2702000" />
-      <workItem from="1679946965511" duration="6600000" />
+      <workItem from="1679946965511" duration="6949000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Random front end&quot;">
       <created>1679839288774</created>
