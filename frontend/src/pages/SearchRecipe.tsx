@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SearchRecipeResponse } from "../model/RecipeModel";
+import '../Styling/SearchByIngredient.css';
+
 
 const SearchRecipe = () => {
     const [search, setSearch] = useState<string>("");

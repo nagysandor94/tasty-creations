@@ -29,7 +29,7 @@ const SearchByIngredient = () => {
     }
 
     function searchRecipe() {
-        let queryParam :string = ingredients.map((ingredient) => ingredient.ingredientName).toString();
+        let queryParam: string = ingredients.map((ingredient) => ingredient.ingredientName).toString();
         console.log(queryParam);
         axios.get('http://localhost:8080/api/findbyingredients', {
             params: {
@@ -47,7 +47,7 @@ const SearchByIngredient = () => {
     }, [setSearchResponse]);
 
     /* Deletes an item based on the `item.id` key */
-    function deleteItem(id:number) {
+    function deleteItem(id: number) {
         const newArray = ingredients.filter((ingredient) => ingredient.ingredientId !== id);
         setIngredients(newArray);
     }
@@ -74,50 +74,53 @@ const SearchByIngredient = () => {
     // Main part of app
     return (
         <>
-        <div className="ingredientList">
-            <h1>What's in your fridge?</h1>
-            <p>Add a new ingredient to your list!</p>
+            <div className="ingredientList">
+                <h1>What's in your fridge?</h1>
+                <p>Add a new ingredient to your list!</p>
 
-            <input
-                type="text"
-                placeholder="Add an ingredient..."
-                value={newIngredient}
-                onChange={(e) => setNewIngredient(e.target.value)}
-            />
+                <input
+                    type="text"
+                    placeholder="Add an ingredient..."
+                    value={newIngredient}
+                    onChange={(e) => setNewIngredient(e.target.value)}
+                />
 
-            {/* Add (button) */}
-            <button onClick={() => addIngredient()}>Add</button>
+                {/* Add (button) */}
+                <button onClick={() => addIngredient()}>Add</button>
 
-            {/* 3. List of todos (unordered list) */}
-            <ul>
-                {ingredients.map((ingredient) => {
-                    return (
-                        <div key={ingredient.ingredientId}>
-                            <li key={ingredient.ingredientId} >
-                                {ingredient.ingredientName}
-                                <button
-                                    className="delete-button"
-                                    onClick={() => deleteItem(ingredient.ingredientId)}
-                                >
-                                    ❌
-                                </button>
-                            </li>
-                        </div>
-                    );
-                })}
-            </ul>
-            <button onClick={() => searchRecipe()}>Search recipes by ingredients</button>
+                {/* 3. List of todos (unordered list) */}
+                <div className='ingredientContainer'>
+                    <div className='ingredientsList'>
+                        {ingredients.map((ingredient) => {
+                            return (
+                                <div className='ingredient' key={ingredient.ingredientId}>
+                                    <div className='ingredient-Item' key={ingredient.ingredientId} >
+                                        {ingredient.ingredientName}
 
-        </div>
-        <div>
+                                        <button
+                                            className="delete-button"
+                                            onClick={() => deleteItem(ingredient.ingredientId)}
+                                        >
+                                            ❌
+                                        </button>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+                <button onClick={() => searchRecipe()}>Search recipes by ingredients</button>
+
+            </div>
+            <div>
                 {responseSearch?.map((response) => {
                     return (<div key={response.id}>
                         <Link to={`/recipe/${response.id}`}>
-                        <img key={response.id} src={response.image} alt="Avatar" />
-                        <div>
-                            
-                            <h4 key={response.id}>{response.title}</h4>
-                        </div>
+                            <img key={response.id} src={response.image} alt="Avatar" />
+                            <div>
+
+                                <h4 key={response.id}>{response.title}</h4>
+                            </div>
                         </Link>
                     </div>)
                 })}
