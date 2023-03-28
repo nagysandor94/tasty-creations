@@ -7,6 +7,12 @@
     <list default="true" id="5dbae058-c8c6-4329-8bf7-357451cba4f5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/FavoriteRecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/FavoriteRecipeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +72,24 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;b43fdd98b1fd705ae4c3a10cf25aad8a&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/salt-dev/Desktop/MainProject/tasty-creations/backend/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "b43fdd98b1fd705ae4c3a10cf25aad8a",
+    "vue.rearranger.settings.migration": "true"
   }
 }</component>
   <component name="ReactorSettings">
@@ -114,6 +138,7 @@
       <workItem from="1679664607350" duration="4213000" />
       <workItem from="1679906074150" duration="17236000" />
       <workItem from="1679988327251" duration="1021000" />
+      <workItem from="1679943227448" duration="8289000" />
     </task>
     <servers />
   </component>

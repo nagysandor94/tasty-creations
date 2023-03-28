@@ -150,4 +150,8 @@ public class TsService {
         return recipe;
 
     }
+
+    public void removeRecipe(int recipeID) {
+            repo.removeRecipe(recipeID);
+    }
 }

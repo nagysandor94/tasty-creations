@@ -6,16 +6,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+
 public record RandomRecipeDTO(
-        @JsonProperty
         Integer id,
         String title,
         ArrayList<ExtendedIngredient> extendedIngredients,
         String instructions,
-        String image
+        String image,
+        Boolean isInFav
 
-) {
-
-
-}
+){}

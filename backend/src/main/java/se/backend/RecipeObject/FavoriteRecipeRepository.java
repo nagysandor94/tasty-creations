@@ -19,4 +19,8 @@ public class FavoriteRecipeRepository {
     public boolean recipeInFavoriets(Integer id) {
         return dbRepo.existsById(Long.valueOf(id));
     }
+
+    public void removeRecipe(int recipeID) {
+        dbRepo.deleteById((long) recipeID);
+    }
 }

@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ef4463d-557c-426a-a111-6128f57c6c6d" name="Changes" comment="&quot;Random front end&quot;">
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/FavoriteRecipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/FavoriteRecipeDBRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/FavoriteRecipeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/AddToFav.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/AddedToFav.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/InstructionDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/FavoriteRecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/FavoriteRecipeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/Recipebackup.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/src/images",
+    "last_opened_file_path": "/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +67,7 @@
       <recent name="$PROJECT_DIR$/src/Styling" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/Styling" />
     </key>
   </component>
@@ -91,7 +80,9 @@
       <option name="presentableId" value="Default" />
       <updated>1679760188682</updated>
       <workItem from="1679760190006" duration="4901000" />
-      <workItem from="1679774170481" duration="30617000" />
+      <workItem from="1679774170481" duration="40333000" />
+      <workItem from="1679937776066" duration="2702000" />
+      <workItem from="1679946965511" duration="6949000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Random front end&quot;">
       <created>1679839288774</created>

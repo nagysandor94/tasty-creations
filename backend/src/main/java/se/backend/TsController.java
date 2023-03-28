@@ -38,6 +38,13 @@ public class TsController {
         return ResponseEntity.ok().build();
     }
 
+    @DeleteMapping("/removefavorite/{recipeID}")
+    public ResponseEntity<Object> removeFavorite(@PathVariable int recipeID){
+        if (recipeInFavorites(recipeID))
+            service.removeRecipe(recipeID);
+    return ResponseEntity.noContent().build();
+    }
+
     private boolean recipeInFavorites(Integer id) {
         return service.recipeInFavorites(id);
     }

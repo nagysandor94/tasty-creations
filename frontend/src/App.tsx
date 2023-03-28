@@ -10,11 +10,13 @@ import RandomRecipe from "./pages/RandomRecipe";
 import SearchRecipe from './pages/SearchRecipe';
 import Recipe from './pages/Recipe';
 import { Link } from 'react-router-dom';
+import background from "../images/bkgrnd.png";
 
 
 function App() {
   return (
     <div className="App">
+
         <h1 className='appHeader'>TASTY CREATIONS</h1>
         <ul className='pageBanner'>
           <li className='listBanner'> <Link className='linkBanner' to="/">Home</Link></li>

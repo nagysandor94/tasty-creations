@@ -4,6 +4,7 @@ export interface RecipeModel {
     extendedIngredients: ExtendedIngredient[]
     instructions: string
     image: string
+    isInFav: boolean
 }
 
 export interface ExtendedIngredient {

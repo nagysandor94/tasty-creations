@@ -27,7 +27,18 @@
 
 .recipeImage{
     width: 80%;
-    filter: blur(5px);
+    filter: blur(8px);
+}
+
+.recipeImageFooter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8%;
+    padding-right: 8%;
+    padding-left: 8%;
+    width: 20%;
+    height: auto;
 }
 
 .ingredientImage{
@@ -60,6 +71,19 @@
 }
 
 .iconFavorite:hover{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+}
+
+.nextIcon{
+    position: absolute;
+    bottom: 50%;
+    left: 80%;
+    max-height: 8%;
+    width: auto;
+}
+
+.nextIcon:hover{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
 }
