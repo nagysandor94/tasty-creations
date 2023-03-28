@@ -3,9 +3,9 @@ server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://rogue.db.elephantsql.com:5432/rdijxiwm
-    username: rdijxiwm
-    password: tsY3OLBTDpoNnRDsNVFT2UVh9hXXfiO6
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PW}
   jpa:
     defer-datasource-initialization: false
     hibernate:
