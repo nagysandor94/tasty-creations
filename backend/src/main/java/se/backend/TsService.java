@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.http.client.utils.URIBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import se.backend.RecipeObject.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -140,6 +142,10 @@ public class TsService {
     }
 
     public Recipe getRecipeById(String id) throws IOException, InterruptedException {
+
+
+
+
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/" + id + "/information"))
                 .header("X-RapidAPI-Key", apiKeyS)
@@ -163,19 +169,24 @@ public class TsService {
             repo.removeRecipe(recipeID);
     }
 
-    public List<ResponseSearchByName> searchRecipeByIngredients(String query) throws IOException, InterruptedException {
+    public List<ResponseSearchByName> searchRecipeByIngredients(String query) throws IOException, InterruptedException, URISyntaxException {
         String apiKey = "9d5d4fbeee6a4046a0a0bda36a37fcec";
+
+        URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/findByIngredients");
+        uriBuilder.addParameter("apiKey", apiKey);
+        uriBuilder.addParameter("number", "2");
+        uriBuilder.addParameter("ingredients", query);
+
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.spoonacular.com/recipes/findByIngredients?ingredients="+query + "&number=2" + "&apiKey=" + apiKey))
+                .uri(uriBuilder.build())
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
+
 
         HttpResponse<String> jsonString = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
 
         List<ResponseSearchByName> responseSearchByNameList = mapper.readValue(jsonString.body(), new TypeReference<List<ResponseSearchByName>>(){});
 
-
-       // ResponseSearchByIngredients responseSearchByIngredients = mapper.readValue(jsonString.body(), ResponseSearchByIngredients.class);
         return responseSearchByNameList;
     }
 }

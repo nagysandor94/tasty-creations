@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import se.backend.RecipeObject.*;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
@@ -26,7 +27,7 @@ public class TsController {
     }
 
     @GetMapping("/findbyingredients")
-    public ResponseEntity<List<ResponseSearchByName>> getRecipeByIngredients(@RequestParam String query) throws IOException, InterruptedException {
+    public ResponseEntity<List<ResponseSearchByName>> getRecipeByIngredients(@RequestParam String query) throws IOException, InterruptedException, URISyntaxException {
         return ResponseEntity.ok(service.searchRecipeByIngredients(query));
     }
 
