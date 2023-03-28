@@ -1,0 +1,15 @@
+se/backend/RecipeObject/RandomRecipeDTO.class
+se/backend/RecipeObject/ListResponseSearchByName.class
+se/backend/RecipeObject/FavoriteRecipeRepository.class
+se/backend/RecipeObject/Recipe.class
+se/backend/RecipeObject/ExtendedIngredient.class
+se/backend/RecipeObject/Metric.class
+se/backend/RecipeObject/Us.class
+se/backend/RecipeObject/FavoriteRecipeDBRepository.class
+se/backend/BackendApplication.class
+se/backend/TsController.class
+se/backend/RecipeObject/RandomRecipeObject.class
+se/backend/RecipeObject/FavoriteRecipe.class
+se/backend/TsService.class
+se/backend/RecipeObject/ResponseSearchByName.class
+se/backend/RecipeObject/Measures.class
