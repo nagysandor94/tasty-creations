@@ -47,3 +47,8 @@ export interface Result {
     title: string;
     image: string;
 }
+
+export interface IIngredients {
+    ingredientId: number;
+    ingredientName: string;
+  }
