@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SearchRecipeResponse } from "../model/RecipeModel";
+import { IIngredients, SearchRecipeResponse } from "../model/RecipeModel";
 import '../Styling/SearchByIngredient.css';
 
 
@@ -12,6 +12,7 @@ const SearchRecipe = () => {
     const handleSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
         getSearchRecipe();
+        localStorage.setItem('items', JSON.stringify(responseSearch));
 
     }
     function getSearchRecipe() {
@@ -28,6 +29,13 @@ const SearchRecipe = () => {
     }
 
     useEffect(() => {
+        // const items : SearchRecipeResponse = localStorage.getItem('items') || "";
+        // if (items) {
+        //  setSearchResponse(items);
+        // }
+
+
+
     }, [setSearchResponse]);
 
     return (

@@ -1,5 +1,5 @@
 .fridgeContainer{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: 'Gloria Hallelujah', cursive;
 	font-size: 1.4rem;
 	background: whitesmoke;
@@ -9,6 +9,7 @@
 	min-height: auto;
     display: grid;
 }
+
 
 .fridgeList {
 	list-style-position: inside;
@@ -25,6 +26,10 @@
     display: list-item;
 
 }
+.fontstyle{
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 1.4rem;
+}
 
 .addedingredient{
 	padding: 0 0 0 1rem;
@@ -33,6 +38,8 @@
 }
 .ingredientinline{
     display: inline-block;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 1.4rem;
 }
 
 .fridgeList:not(:last-child) {
