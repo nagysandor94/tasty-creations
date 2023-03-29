@@ -43,18 +43,21 @@ const SearchRecipe = () => {
                 <button onClick={event => handleSubmit(event)}>Search</button>
             </form>
 
-            <div>
+            <div className="favoritesSection">
+            <h1>Search results</h1>
+            <div className='favoritesDashboard'>
                 {responseSearch?.results.map((response) => {
-                    return (<div key={response.id}>
+                    return (<div className="favoritesCard" key={response.id}>
                         <Link to={`/recipe/${response.id}`}>
-                            <img key={response.id} src={response.image} alt="Avatar" />
+                            <img className="favoriteRecipeImage" key={response.id} src={response.image} alt="Avatar" />
                             <div>
 
-                                <h4 key={response.id}>{response.title}</h4>
+                                <h4 className="favoriteRecipeName" key={response.id}>{response.title}</h4>
                             </div>
                         </Link>
                     </div>)
                 })}
+            </div>
             </div>
         </>
     )

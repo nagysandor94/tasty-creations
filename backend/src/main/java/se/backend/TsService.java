@@ -75,10 +75,6 @@ public class TsService {
         uriBuilder.addParameter("apiKey", apiKey);
         //uriBuilder.addParameter("number", "2");
         uriBuilder.addParameter("query", query);
-
-
-
-
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uriBuilder.build())
                 .method("GET", HttpRequest.BodyPublishers.noBody())
@@ -362,27 +358,27 @@ public class TsService {
                     "imageType": "jpg",
                     "instructions": "Brown the meat in a large sauce pan, drain off any excess grease and mix into the marinara sauce.Boil the noodles as directed on the package.Mix the eggs, cottage cheese and parmigiano reggiano in a large bowl.Spread 1/2 cup of the meat sauce over the bottom of a baking dish*.Place a layer of noodles on top.Place 1/2 of the cottage cheese mixture on top.Place 1/3 of the mozzarella on top.Place 1/3 of the meat sauce top.Place a layer of noodles on top.Place the remaining cottage cheese mixture on top.Place 1/3 of the mozzarella on top.Place 1/3 of the meat sauce top.Place a layer of noodles on top.Place the remaining meat sauce top.Place the remaining mozzarella and parmigiano reggiano on top.Bake in a preheated 350F oven until bubbling on the sides and golden brown on top, about 30-45 minutes."
                 }
-
-
-                
-
-
+                """;
         Recipe recipe = mapper.readValue(jsonResponse, Recipe.class);
-    public Recipe getRecipeById(String id) throws IOException, InterruptedException, URISyntaxException {
-        String apiKey = "9d5d4fbeee6a4046a0a0bda36a37fcec";
-
-        URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/" + id + "/information");
-        uriBuilder.addParameter("apiKey", apiKey);
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(uriBuilder.build())
-                .method("GET", HttpRequest.BodyPublishers.noBody())
-                .build();
-        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        Recipe recipe = mapper.readValue(response.body(), Recipe.class);
-
-        return recipe;
-
+    return recipe;
     }
+
+
+//    public Recipe getRecipeById(String id) throws IOException, InterruptedException, URISyntaxException {
+//        String apiKey = "9d5d4fbeee6a4046a0a0bda36a37fcec";
+//
+//        URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/" + id + "/information");
+//        uriBuilder.addParameter("apiKey", apiKey);
+//        HttpRequest request = HttpRequest.newBuilder()
+//                .uri(uriBuilder.build())
+//                .method("GET", HttpRequest.BodyPublishers.noBody())
+//                .build();
+//        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+//        Recipe recipe = mapper.readValue(response.body(), Recipe.class);
+//
+//        return recipe;
+//
+//    }
 
     public void removeRecipe(int recipeID) {
             repo.removeRecipe(recipeID);
