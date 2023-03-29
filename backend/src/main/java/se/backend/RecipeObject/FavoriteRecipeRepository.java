@@ -1,5 +1,4 @@
 package se.backend.RecipeObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -22,5 +21,10 @@ public class FavoriteRecipeRepository {
 
     public void removeRecipe(int recipeID) {
         dbRepo.deleteById((long) recipeID);
+    }
+
+
+    public Iterable<FavoriteRecipe> getFavorites() {
+        return dbRepo.findAll();
     }
 }

@@ -12,7 +12,7 @@ public record RandomRecipeDTO(
         String title,
         ArrayList<ExtendedIngredient> extendedIngredients,
         String instructions,
-        String image
-//        Boolean isInFav
+        String image,
+        Boolean isInFav
 
 ){}
