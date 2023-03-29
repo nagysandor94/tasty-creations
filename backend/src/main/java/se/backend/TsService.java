@@ -73,7 +73,7 @@ public class TsService {
 
         URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/complexSearch");
         uriBuilder.addParameter("apiKey", apiKey);
-        //uriBuilder.addParameter("number", "2");
+        uriBuilder.addParameter("number", "3");
         uriBuilder.addParameter("query", query);
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uriBuilder.build())
