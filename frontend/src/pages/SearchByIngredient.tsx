@@ -52,26 +52,7 @@ const SearchByIngredient = () => {
         setIngredients(newArray);
     }
 
-    // /* Edit an item text after creating it. */
-    // function editItem(id, newText) {
-    //     // Get the current item
-    //     const currentItem = items.filter((item) => item.id === id);
 
-    //     // Create a new item with same id
-    //     const newItem = {
-    //         id: currentItem.id,
-    //         value: newText,
-    //     };
-
-    //     deleteItem(id);
-
-    //     // Replace item in the item list
-    //     setItems((oldList) => [...oldList, newItem]);
-    //     setUpdatedText("");
-    //     setShowEdit(-1);
-    // }
-
-    // Main part of app
     return (
         <>
             <div className="ingredientList">
@@ -94,7 +75,7 @@ const SearchByIngredient = () => {
                         {ingredients.map((ingredient) => {
                             return (
                                 <div className='ingredient' key={ingredient.ingredientId}>
-                                    <div className='ingredient-Item' key={ingredient.ingredientId} >
+                                    <div className='ingredientinline' key={ingredient.ingredientId} >
                                         {ingredient.ingredientName}
 
                                         <button
