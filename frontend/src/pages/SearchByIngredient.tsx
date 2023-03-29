@@ -44,6 +44,16 @@ const SearchByIngredient = () => {
     }
 
     useEffect(() => {
+        if (sessionStorage.getItem("mySearch")) {
+            const searchHistory = JSON.parse(sessionStorage.getItem("mySearch") || "");
+            //console.log(searchHistory);
+
+            if (searchHistory) {
+                setSearchResponse(searchHistory);
+
+            }
+        }
+    }, []);
 
     /* Deletes an item based on the `item.id` key */
     function deleteItem(id: number) {
