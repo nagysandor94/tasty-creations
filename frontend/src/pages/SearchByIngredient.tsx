@@ -44,7 +44,6 @@ const SearchByIngredient = () => {
     }
 
     useEffect(() => {
-    }, [setSearchResponse]);
 
     /* Deletes an item based on the `item.id` key */
     function deleteItem(id: number) {
