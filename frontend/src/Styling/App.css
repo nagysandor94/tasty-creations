@@ -20,8 +20,8 @@
   width: 100%;
   padding: 30px 0;
   text-align: center;
-  background: #33cccc;
-  color: white;
+  /*background: #33cccc;*/
+  color: navajowhite;
 }
 
 .pageBanner {
@@ -30,15 +30,15 @@
   justify-content: space-evenly;
   font-size: 4vw;
   overflow: hidden;
-  background: #33cccc;
+  /*background: #33cccc;*/
   padding: 10px 0;
-  color: white;
+  color: transparent;
 }
 
 
 .linkBanner {
   padding: 8px;
-  color: white;
+  color: transparent;
 }
 
 .linkBanner:hover{

@@ -58,3 +58,7 @@ export interface favoritesList {
     title: string;
     image: string;
 }
+export interface IIngredients {
+    ingredientId: number;
+    ingredientName: string;
+}
