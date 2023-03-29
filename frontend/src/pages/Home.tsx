@@ -11,7 +11,7 @@ const Home = () => {
 
     return(
         <div>
-            <h1 className="homeHeader">HOME</h1>
+            <h1 className="homeHeader"><em>HOME</em></h1>
         <div className='homePage'>
             <div className='homePageCards'>
                 <Link to="/randomrecipe"><h3 className='card'>Random Recipe</h3></Link>

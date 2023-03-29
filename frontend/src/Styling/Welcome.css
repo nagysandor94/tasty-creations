@@ -1,0 +1,13 @@
+.welcomeQuote{
+    font-family: Avenir;
+    text-align: -webkit-center;
+    padding-bottom: 520px;
+    color: wheat;
+    padding-top:2%;
+}
+
+@media only screen and (min-width: 1000px ) {
+    .welcomeQuote{
+        padding-bottom: 800px;
+    }
+}

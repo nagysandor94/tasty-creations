@@ -12,6 +12,7 @@ import Recipe from './pages/Recipe';
 import { Link } from 'react-router-dom';
 import background from "../images/bkgrnd.png";
 import SearchByIngredient from './pages/SearchByIngredient';
+import Welcome from "./pages/Welcome";
 
 
 function App() {
@@ -19,12 +20,13 @@ function App() {
     <div className="App">
         <h1 className='appHeader'>TASTY CREATIONS</h1>
         <div className='pageBanner'>
-            <Link className='linkBanner' to="/">Home</Link>
+            <Link className='linkBanner' to="/home">Home</Link>
             <Link className='linkBanner' to="/about">About</Link>
             <Link className='linkBanner' to="/favorites">Favorites</Link>
         </div>
       <Routes>
-          <Route path='/' element={<Home/>}> </Route>
+          <Route path='/' element={<Welcome/>}></Route>
+          <Route path='/home' element={<Home/>}> </Route>
           <Route path='/about' element={<About/>}> </Route>
           <Route path='/favorites' element={<Favorites/>}> </Route>
           <Route path='/randomrecipe' element={<RandomRecipe/>}></Route>

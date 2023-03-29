@@ -1,14 +1,19 @@
 .App {
   padding: 3%;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: black;
+  background-image: url("../images/Backgroundv1.jpg");
+  /*background-size: cover;*/
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
 @media only screen and (min-width: 1000px) {
   .App{
-    background-color: whitesmoke;
-    background-image: url("../images/AppBackground.jpg");
+    /*background-color: whitesmoke;*/
+    /*background-image: url("../images/AppBackground.jpg");*/
     background-size: cover;
   }
 
@@ -20,25 +25,27 @@
   width: 100%;
   padding: 30px 0;
   text-align: center;
-  background: #33cccc;
-  color: white;
+  /*background: #33cccc;*/
+  background: transparent;
+  color:wheat;
 }
 
 .pageBanner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  font-size: 4vw;
+  font-size: 3vw;
   overflow: hidden;
-  background: #33cccc;
+  background:#004d4d;
+  /*background: #33cccc;*/
   padding: 10px 0;
-  color: white;
+  color:black;
 }
 
 
 .linkBanner {
   padding: 8px;
-  color: white;
+  color: whitesmoke;
 }
 
 .linkBanner:hover{
