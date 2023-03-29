@@ -47,3 +47,14 @@ export interface Result {
     title: string;
     image: string;
 }
+
+
+export interface FavoritesListResponse {
+    favoritesList: favoritesList[];
+}
+
+export interface favoritesList {
+    id: string;
+    title: string;
+    image: string;
+}

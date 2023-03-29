@@ -21,7 +21,7 @@ const RandomRecipe = () => {
                 setRecipe(response.data);
                 setInstructionList(response.data.instructions.split("."));
                 setIsInFav(response.data.isInFav);
-                console.log(response.data);
+                //console.log(response.data);
             });
     }
 
@@ -42,17 +42,19 @@ const RandomRecipe = () => {
 
     return(
         <div className='randomRecipe'>
-            <h1>RandomRecipe</h1>
+            <h1 className="randomRecipeHeader">RandomRecipe</h1>
             <div className="recipeHeading">
-            <img className="recipeImage" src={recipe?.image}></img>
                 <div className="recipeName">{recipe?.title}</div>
                 <img className="iconFavorite" src={addToFav} onClick={addRecipeToFavorite}></img>
                 {isInFav &&
                 <img className="iconFavorite" src={addedToFav} onClick={removeRecipeFromFavorite}></img>
                 }
                 <img className="nextIcon" src={nextIcon} onClick={getRandomRecipe}></img>
+                <img className="recipeImage" src={recipe?.image}></img>
             </div>
-            <h4>Ingredients</h4>
+
+            <div className="ingredientsSection">
+            <h4 className="ingredientsHeader">Ingredients</h4>
             <div className="ingredientsList">
             {recipe?.extendedIngredients.map(item=><IngredientItem id={item.id} aisle={item.aisle} image={item.image}
                                                                    name={item.name} amount={item.amount} unit={item.unit}
@@ -60,11 +62,15 @@ const RandomRecipe = () => {
                                                                    originalString={item.originalString}
                                                                    metaInformation={item.metaInformation} measures={item.measures}/>)}
             </div>
-            <h4>Instructions</h4>
-            <ol className="instructionsList">
+            </div>
+            <div className="instructionsList">
+            <h3 className="instructionsHeader">Instructions</h3>
+            <ol>
             {instructionList.map(item=><Instructions name={item}/>)}
             </ol>
             <img className="recipeImageFooter" src={recipe?.image}></img>
+            </div>
+        <br/><br/>
             </div>
 
     );

@@ -10,15 +10,17 @@ const Home = () => {
 
 
     return(
+        <div>
+            <h1 className="homeHeader">HOME</h1>
         <div className='homePage'>
-        <h1>HOME</h1>
-            <ul className='homePageCards'>
-                <li className='card'><Link to="/randomrecipe">Random Recipe</Link></li>
-                <li className='card'><Link to="/byrecipe">By Recipe</Link></li>
-                <li className='card'><Link to="/byingredients">By Ingredients</Link></li>
-                <li className='card'><Link to="partyrecipe">Recipe for Party</Link></li>
+            <div className='homePageCards'>
+                <Link to="/randomrecipe"><h3 className='card'>Random Recipe</h3></Link>
+                <Link to="/byrecipe"><h3 className='card'>By Recipe</h3></Link>
+                <Link to="/byingredients"><h3 className='card'>By Ingredients</h3></Link>
+                <Link to="partyrecipe"><h3 className='card'>Recipe for Party</h3></Link>
                 <br/>
-            </ul>
+            </div>
+        </div>
         </div>
     )
 }

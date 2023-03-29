@@ -6,11 +6,17 @@ import {ExtendedIngredient, RecipeModel} from "../model/RecipeModel";
 
 
 const Instructions = ({ name }: { name: string }) => {
-    const data=name;
-
+    let check =checkEmpty(name);
+        function checkEmpty(props:string)
+        {
+            if(props=="")
+                return false;
+            return true;
+        }
     return(
-        <li>{data}</li>
-    )
+        <div>
+            {check && <li className="instructions">{name}</li>}
+        </div>)
 }
 
 export default Instructions;

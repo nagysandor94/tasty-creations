@@ -20,14 +20,14 @@ const Recipe = () => {
             .then(response=>{
                 setRecipe(response.data);
                 setInstructionList(response.data.instructions.split("."));
-                console.log(response.data);
+                //console.log(response.data);
             });
     }
 
     useEffect(()=>{
         if(id){
             getRecipe(id);
-        }        
+        }
     },[]);
 
     function addRecipeToFavorite() {
@@ -36,6 +36,8 @@ const Recipe = () => {
     }
 
     function removeRecipeFromFavorite() {
+        let url="http://localhost:8080/api/removefavorite/"+recipe?.id;
+        axios.delete(url);
         setIsInFav(false);
     }
 

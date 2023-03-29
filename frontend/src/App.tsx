@@ -16,13 +16,12 @@ import background from "../images/bkgrnd.png";
 function App() {
   return (
     <div className="App">
-
         <h1 className='appHeader'>TASTY CREATIONS</h1>
-        <ul className='pageBanner'>
-          <li className='listBanner'> <Link className='linkBanner' to="/">Home</Link></li>
-            <li className='listBanner'><Link className='linkBanner' to="/about">About</Link></li>
-            <li className='listBanner'><Link className='linkBanner' to="/favorites">Favorites</Link></li>
-        </ul>
+        <div className='pageBanner'>
+            <Link className='linkBanner' to="/">Home</Link>
+            <Link className='linkBanner' to="/about">About</Link>
+            <Link className='linkBanner' to="/favorites">Favorites</Link>
+        </div>
       <Routes>
           <Route path='/' element={<Home/>}> </Route>
           <Route path='/about' element={<About/>}> </Route>
