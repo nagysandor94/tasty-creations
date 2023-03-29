@@ -25,8 +25,31 @@ const SearchByIngredient = () => {
 
         setIngredients((oldList) => [...oldList, ingredient]);
 
+        let arrayOfIngredient = ingredients.map(function(ingredient) {
+            return ingredient;
+        });
+        console.log(arrayOfIngredient);
+
+
+
+
+
+        // let arrayOfIngredients = arrayOfIngredient.push(ingredient);
+        // console.log(arrayOfIngredients);
+
+        let ingredientsSerialized = JSON.stringify(arrayOfIngredient);
+        console.log(ingredientsSerialized);
+
+
+
+       // sessionStorage.setItem("myIngredients", ingredientsSerialized);
+       // console.log(sessionStorage.getItem("myIngredients"))
         setNewIngredient("");
     }
+
+
+
+
 
     function searchRecipe() {
         let queryParam: string = ingredients.map((ingredient) => ingredient.ingredientName).toString();
@@ -38,7 +61,9 @@ const SearchByIngredient = () => {
         })
             .then(response => {
                 setSearchResponse(response.data);
-                console.log(responseSearch);
+                let searchserialized = JSON.stringify(response.data);
+                sessionStorage.setItem("mySearch", searchserialized);
+                //console.log(localStorage);
             });
 
     }
@@ -53,12 +78,27 @@ const SearchByIngredient = () => {
 
             }
         }
+
+
+        if (sessionStorage.getItem("myIngredients")) {
+            const ingredientshHistory = JSON.parse(sessionStorage.getItem("myIngredients")||"");
+            console.log(ingredientshHistory);
+
+
+            if (ingredientshHistory) {
+                setIngredients(ingredientshHistory);
+
+            }
+        }
+
     }, []);
 
     /* Deletes an item based on the `item.id` key */
     function deleteItem(id: number) {
         const newArray = ingredients.filter((ingredient) => ingredient.ingredientId !== id);
         setIngredients(newArray);
+        let newArraySerialized = JSON.stringify(newArray);
+        sessionStorage.setItem("myIngredients", newArraySerialized);
     }
 
 
