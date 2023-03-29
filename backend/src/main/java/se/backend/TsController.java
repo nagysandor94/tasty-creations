@@ -8,6 +8,10 @@ import se.backend.RecipeObject.RandomRecipeDTO;
 import se.backend.RecipeObject.Recipe;
 
 import java.io.IOException;
+import se.backend.RecipeObject.*;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
@@ -24,12 +28,17 @@ public class TsController {
 
 
     @GetMapping("/searchrecipebyname")
-    public ResponseEntity<ListResponseSearchByName> getRecipeByName(@RequestParam String query) throws IOException, InterruptedException {
+    public ResponseEntity<ListResponseSearchByName> getRecipeByName(@RequestParam String query) throws IOException, InterruptedException, URISyntaxException {
         return ResponseEntity.ok(service.searchRecipeByName(query));
     }
 
+    @GetMapping("/findbyingredients")
+    public ResponseEntity<List<ResponseSearchByName>> getRecipeByIngredients(@RequestParam String query) throws IOException, InterruptedException, URISyntaxException {
+        return ResponseEntity.ok(service.searchRecipeByIngredients(query));
+    }
+
     @GetMapping("getrecipe/{id}")
-    public ResponseEntity<Recipe> getRecipeById(@PathVariable String id) throws IOException, InterruptedException {
+    public ResponseEntity<Recipe> getRecipeById(@PathVariable String id) throws IOException, InterruptedException, URISyntaxException {
         return ResponseEntity.ok(service.getRecipeById(id));
     }
 

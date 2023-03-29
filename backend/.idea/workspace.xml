@@ -25,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Instructions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Instructions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Recipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Recipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,15 +68,20 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/salt-dev/Desktop/MainProject/tasty-creations/backend/pom.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/salt-dev/Documents/tasty-creations/backend/pom.xml&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;b43fdd98b1fd705ae4c3a10cf25aad8a&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test" />
@@ -112,10 +118,10 @@
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
         <env name="API_KEY_I" value="16c3ec98bcmshd183df0ce8c7e74p1efae2jsn6b1abdcdf768" />
-        <env name="DB_PW" value="tsY3OLBTDpoNnRDsNVFT2UVh9hXXfiO6" />
-        <env name="DB_URL" value="jdbc:postgresql://rogue.db.elephantsql.com:5432/rdijxiwm" />
-        <env name="DB_USER" value="rdijxiwm" />
         <env name="API_KEY_S" value="c7f6134871msh0d414c4956237b2p181154jsn2becb126a6e3" />
+        <env name="DB_PW" value="jTBLpBSh8vNrnLYnE7gkCIiLBcHE42QK" />
+        <env name="DB_URL" value="jdbc:postgresql://mouse.db.elephantsql.com:5432/ebypfghn" />
+        <env name="DB_USER" value="ebypfghn" />
       </envs>
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="se.backend.BackendApplication" />
@@ -152,6 +158,9 @@
       <workItem from="1679993772454" duration="4120000" />
       <workItem from="1680003146837" duration="10411000" />
       <workItem from="1680072156241" duration="414000" />
+      <workItem from="1679993772454" duration="15579000" />
+      <workItem from="1680023722170" duration="1061000" />
+      <workItem from="1680075439594" duration="322000" />
     </task>
     <servers />
   </component>
@@ -175,6 +184,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/se/backend/TsController.java</url>
           <line>27</line>
+          <line>30</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -182,6 +192,7 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="jdk.internal.net.http.ImmutableHttpRequest" memberName="version" />
+        <PinnedItemInfo parentTag="jdk.internal.net.http.HttpResponseImpl" memberName="uri" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

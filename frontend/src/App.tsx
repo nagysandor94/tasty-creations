@@ -11,6 +11,7 @@ import SearchRecipe from './pages/SearchRecipe';
 import Recipe from './pages/Recipe';
 import { Link } from 'react-router-dom';
 import background from "../images/bkgrnd.png";
+import SearchByIngredient from './pages/SearchByIngredient';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path='/randomrecipe' element={<RandomRecipe/>}></Route>
           <Route path='/byrecipe' element={<SearchRecipe/>}></Route>
           <Route path='/recipe/:id' element={<Recipe />}></Route>
+          <Route path='/byingredients' element={<SearchByIngredient />}></Route>
       </Routes>
     </div>
   );

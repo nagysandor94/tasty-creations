@@ -1,19 +1,27 @@
 package se.backend;
 
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.http.client.utils.URIBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import se.backend.RecipeObject.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class TsService {
@@ -60,78 +68,82 @@ public class TsService {
         return repo.recipeInFavoriets(id);
     }
 
-    public ListResponseSearchByName searchRecipeByName(String query) throws IOException, InterruptedException {
-        RestTemplate restTemplate = new RestTemplate();
-//        HttpRequest request = HttpRequest.newBuilder()
-//                .uri(URI.create("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query="+query))
-//                .header("X-RapidAPI-Key", apiKeyS)
-//                .header("X-RapidAPI-Host", "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com")
-//                .method("GET", HttpRequest.BodyPublishers.noBody())
-//                .build();
+    public ListResponseSearchByName searchRecipeByName(String query) throws IOException, InterruptedException, URISyntaxException {
+        String apiKey = "9d5d4fbeee6a4046a0a0bda36a37fcec";
+
+        URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/complexSearch");
+        uriBuilder.addParameter("apiKey", apiKey);
+        //uriBuilder.addParameter("number", "2");
+        uriBuilder.addParameter("query", query);
+
+
+
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uriBuilder.build())
+                .method("GET", HttpRequest.BodyPublishers.noBody())
+                .build();
+
 //
-//        ObjectMapper objectMapper = new ObjectMapper();
-
-//Hardcoded Json to prevent multiple calls to external API
-
-        String jsonResponse = """
-                {
-                    "results": [
-                        {
-                            "id": "247730",
-                            "title": "Lasagna",
-                            "image": "https://spoonacular.com/recipeImages/247730-312x231.jpg"
-                        },
-                        {
-                            "id": "544052",
-                            "title": "Lasagna",
-                            "image": "https://spoonacular.com/recipeImages/544052-312x231.jpg"
-                        },
-                        {
-                            "id": "808433",
-                            "title": "Lasagna",
-                            "image": "https://spoonacular.com/recipeImages/808433-312x231.jpg"
-                        },
-                        {
-                            "id": "107361",
-                            "title": "Lasagna",
-                            "image": "https://spoonacular.com/recipeImages/107361-312x231.png"
-                        },
-                        {
-                            "id": "485445",
-                            "title": "Lasagna",
-                            "image": "https://spoonacular.com/recipeImages/485445-312x231.jpg"
-                        },
-                        {
-                            "id": "389775",
-                            "title": "Lasagna",
-                            "image": "https://spoonacular.com/recipeImages/389775-312x231.jpeg"
-                        },
-                        {
-                            "id": "326698",
-                            "title": "Lasagna",
-                            "image": "https://spoonacular.com/recipeImages/326698-312x231.jpeg"
-                        },
-                        {
-                            "id": "566186",
-                            "title": "Lasagna Dip",
-                            "image": "https://spoonacular.com/recipeImages/566186-312x231.jpg"
-                        },
-                        {
-                            "id": "627701",
-                            "title": "Lasagna Dip",
-                            "image": "https://spoonacular.com/recipeImages/627701-312x231.jpg"
-                        },
-                        {
-                            "id": "248684",
-                            "title": "Lasagna Dip",
-                            "image": "https://spoonacular.com/recipeImages/248684-312x231.jpg"
-                        }
-                    ]
-                }
-                """;
-//        HttpResponse<String> jsonString = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-//        ListResponseSearchByName listResponseSearchByName = objectMapper.readValue(jsonString.body(), ListResponseSearchByName.class);
-        ListResponseSearchByName listResponseSearchByName = mapper.readValue(jsonResponse, ListResponseSearchByName.class);
+//        String jsonResponse = """
+//                {
+//                    "results": [
+//                        {
+//                            "id": "247730",
+//                            "title": "Lasagna",
+//                            "image": "https://spoonacular.com/recipeImages/247730-312x231.jpg"
+//                        },
+//                        {
+//                            "id": "544052",
+//                            "title": "Lasagna",
+//                            "image": "https://spoonacular.com/recipeImages/544052-312x231.jpg"
+//                        },
+//                        {
+//                            "id": "808433",
+//                            "title": "Lasagna",
+//                            "image": "https://spoonacular.com/recipeImages/808433-312x231.jpg"
+//                        },
+//                        {
+//                            "id": "107361",
+//                            "title": "Lasagna",
+//                            "image": "https://spoonacular.com/recipeImages/107361-312x231.png"
+//                        },
+//                        {
+//                            "id": "485445",
+//                            "title": "Lasagna",
+//                            "image": "https://spoonacular.com/recipeImages/485445-312x231.jpg"
+//                        },
+//                        {
+//                            "id": "389775",
+//                            "title": "Lasagna",
+//                            "image": "https://spoonacular.com/recipeImages/389775-312x231.jpeg"
+//                        },
+//                        {
+//                            "id": "326698",
+//                            "title": "Lasagna",
+//                            "image": "https://spoonacular.com/recipeImages/326698-312x231.jpeg"
+//                        },
+//                        {
+//                            "id": "566186",
+//                            "title": "Lasagna Dip",
+//                            "image": "https://spoonacular.com/recipeImages/566186-312x231.jpg"
+//                        },
+//                        {
+//                            "id": "627701",
+//                            "title": "Lasagna Dip",
+//                            "image": "https://spoonacular.com/recipeImages/627701-312x231.jpg"
+//                        },
+//                        {
+//                            "id": "248684",
+//                            "title": "Lasagna Dip",
+//                            "image": "https://spoonacular.com/recipeImages/248684-312x231.jpg"
+//                        }
+//                    ]
+//                }
+//                """;
+        HttpResponse<String> jsonString = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+        ListResponseSearchByName listResponseSearchByName = mapper.readValue(jsonString.body(), ListResponseSearchByName.class);
+       // ListResponseSearchByName listResponseSearchByName = objectMapper.readValue(jsonResponse, ListResponseSearchByName.class);
         return listResponseSearchByName;
 
     }
@@ -352,10 +364,22 @@ public class TsService {
                 }
 
 
-                """;
+                
 
 
         Recipe recipe = mapper.readValue(jsonResponse, Recipe.class);
+    public Recipe getRecipeById(String id) throws IOException, InterruptedException, URISyntaxException {
+        String apiKey = "9d5d4fbeee6a4046a0a0bda36a37fcec";
+
+        URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/" + id + "/information");
+        uriBuilder.addParameter("apiKey", apiKey);
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uriBuilder.build())
+                .method("GET", HttpRequest.BodyPublishers.noBody())
+                .build();
+        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+        Recipe recipe = mapper.readValue(response.body(), Recipe.class);
+
         return recipe;
 
     }
@@ -373,4 +397,24 @@ public class TsService {
 
 
 
+    public List<ResponseSearchByName> searchRecipeByIngredients(String query) throws IOException, InterruptedException, URISyntaxException {
+        String apiKey = "9d5d4fbeee6a4046a0a0bda36a37fcec";
+
+        URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/findByIngredients");
+        uriBuilder.addParameter("apiKey", apiKey);
+        uriBuilder.addParameter("number", "2");
+        uriBuilder.addParameter("ingredients", query);
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(uriBuilder.build())
+                .method("GET", HttpRequest.BodyPublishers.noBody())
+                .build();
+
+
+        HttpResponse<String> jsonString = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+
+        List<ResponseSearchByName> responseSearchByNameList = mapper.readValue(jsonString.body(), new TypeReference<List<ResponseSearchByName>>(){});
+
+        return responseSearchByNameList;
+    }
 }

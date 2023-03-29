@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SearchRecipeResponse } from "../model/RecipeModel";
+import '../Styling/SearchByIngredient.css';
+
 
 const SearchRecipe = () => {
     const [search, setSearch] = useState<string>("");
@@ -13,7 +15,11 @@ const SearchRecipe = () => {
 
     }
     function getSearchRecipe() {
-        axios.get<SearchRecipeResponse>('http://localhost:8080/api/searchrecipebyname?query=' + search)
+        axios.get<SearchRecipeResponse>('http://localhost:8080/api/searchrecipebyname', {
+            params: {
+                query: search
+            }
+        })
             .then(response => {
                 setSearchResponse(response.data);
                 console.log(responseSearch?.results);
@@ -27,7 +33,7 @@ const SearchRecipe = () => {
     return (
         <>
             <form >
-                <label>Enter your name:
+                <label>Search recipe:
                     <input
                         type="text"
                         value={search}
@@ -41,11 +47,11 @@ const SearchRecipe = () => {
                 {responseSearch?.results.map((response) => {
                     return (<div key={response.id}>
                         <Link to={`/recipe/${response.id}`}>
-                        <img key={response.id} src={response.image} alt="Avatar" />
-                        <div>
-                            
-                            <h4 key={response.id}>{response.title}</h4>
-                        </div>
+                            <img key={response.id} src={response.image} alt="Avatar" />
+                            <div>
+
+                                <h4 key={response.id}>{response.title}</h4>
+                            </div>
                         </Link>
                     </div>)
                 })}
