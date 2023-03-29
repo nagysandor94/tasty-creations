@@ -55,7 +55,7 @@ const SearchByIngredient = () => {
 
     return (
         <>
-            <div className="ingredientList">
+            <div className="">
                 <h1>What's in your fridge?</h1>
                 <p>Add a new ingredient to your list!</p>
 
@@ -66,15 +66,15 @@ const SearchByIngredient = () => {
                     onChange={(e) => setNewIngredient(e.target.value)}
                 />
 
-                {/* Add (button) */}
+
                 <button onClick={() => addIngredient()}>Add</button>
 
-                {/* 3. List of todos (unordered list) */}
-                <div className='ingredientContainer'>
-                    <div className='ingredientsList'>
+
+                <div className='fridgeContainer'>
+                    <div className=''>
                         {ingredients.map((ingredient) => {
                             return (
-                                <div className='ingredient' key={ingredient.ingredientId}>
+                                <div className='fridgeList' key={ingredient.ingredientId}>
                                     <div className='ingredientinline' key={ingredient.ingredientId} >
                                         {ingredient.ingredientName}
 
