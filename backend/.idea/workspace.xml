@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/SearchByIngredient.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/SearchByIngredient.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/SearchByIngredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/SearchByIngredient.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +141,7 @@
       <workItem from="1680023722170" duration="1061000" />
       <workItem from="1680075439594" duration="322000" />
       <workItem from="1680079040510" duration="1543000" />
-      <workItem from="1680160552523" duration="2850000" />
+      <workItem from="1680160552523" duration="3460000" />
     </task>
     <servers />
   </component>
