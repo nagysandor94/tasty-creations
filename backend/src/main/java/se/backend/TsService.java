@@ -120,7 +120,6 @@ public class TsService {
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         
-
         HttpResponse<String> jsonString = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
 
         List<ResponseSearchByName> responseSearchByNameList = mapper.readValue(jsonString.body(), new TypeReference<List<ResponseSearchByName>>(){});
