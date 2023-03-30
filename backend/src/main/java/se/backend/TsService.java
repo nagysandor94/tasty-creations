@@ -367,7 +367,7 @@ public class TsService {
                 .build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
         Recipe recipe = mapper.readValue(response.body(), Recipe.class);
-
+        recipe.setInstructions(recipe.instructions.replaceAll("<[^>]*>", ""));
         return recipe;
 
     }
