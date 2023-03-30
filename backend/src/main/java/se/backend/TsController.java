@@ -22,7 +22,7 @@ public class TsController {
     TsService service;
 
     @GetMapping("/random")
-    public ResponseEntity<RandomRecipeDTO> getRandomRecipe() throws IOException, InterruptedException {
+    public ResponseEntity<RandomRecipeDTO> getRandomRecipe() throws IOException, InterruptedException, URISyntaxException {
         return  ResponseEntity.ok(service.getRandomRecipe());
     }
 

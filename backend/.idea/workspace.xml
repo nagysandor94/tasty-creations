@@ -7,6 +7,8 @@
     <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="">
 
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RandomRecipeObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RandomRecipeObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" afterDir="false" />
 
       <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/SearchByIngredient.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/SearchByIngredient.css" afterDir="false" />
@@ -105,7 +107,7 @@
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
         <env name="API_KEY_I" value="16c3ec98bcmshd183df0ce8c7e74p1efae2jsn6b1abdcdf768" />
-        <env name="API_KEY_S" value="c7f6134871msh0d414c4956237b2p181154jsn2becb126a6e3" />
+        <env name="API_KEY_S" value="9d5d4fbeee6a4046a0a0bda36a37fcec" />
         <env name="DB_PW" value="jTBLpBSh8vNrnLYnE7gkCIiLBcHE42QK" />
         <env name="DB_URL" value="jdbc:postgresql://mouse.db.elephantsql.com:5432/ebypfghn" />
         <env name="DB_USER" value="ebypfghn" />
@@ -129,6 +131,8 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BackendApplicationTests" />
+        <item itemvalue="JAR Application.backend-0.0.1-SNAPSHOT.jar" />
         <item itemvalue="JAR Application.backend-0.0.1-SNAPSHOT.jar" />
         <item itemvalue="JUnit.BackendApplicationTests" />
       </list>
@@ -148,7 +152,8 @@
       <workItem from="1679993772454" duration="15579000" />
       <workItem from="1680023722170" duration="1061000" />
       <workItem from="1680075439594" duration="322000" />
-      <workItem from="1680079040510" duration="937000" />
+      <workItem from="1680079040510" duration="1543000" />
+      <workItem from="1680160552523" duration="2410000" />
     </task>
     <servers />
   </component>
@@ -171,8 +176,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/se/backend/TsController.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
+          <line>25</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
