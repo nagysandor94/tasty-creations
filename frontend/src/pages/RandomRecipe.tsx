@@ -11,12 +11,14 @@ import nextIcon from "../images/NextIcon.png";
 
 
 const RandomRecipe = () => {
+    const baseUrl = "https://tasty-creation.azurewebsites.net/";
+
     const [recipe,setRecipe]=useState<RecipeModel>();
     const [instructionList,setInstructionList]=useState<string[]>([]);
     const [isInFav,setIsInFav]=useState<boolean>(false);
 
     function getRandomRecipe() {
-        axios.get<RecipeModel>('http://localhost:8080/api/random')
+        axios.get<RecipeModel>(baseUrl+ "api/random")
             .then(response=>{
                 setRecipe(response.data);
                 setInstructionList(response.data.instructions.split("."));
@@ -30,12 +32,12 @@ const RandomRecipe = () => {
     },[]);
 
     function addRecipeToFavorite() {
-        axios.post("http://localhost:8080/api/addfavorite",recipe);
+        axios.post(baseUrl + "api/addfavorite",recipe);
         setIsInFav(true);
     }
 
     function removeRecipeFromFavorite() {
-        let url="http://localhost:8080/api/removefavorite/"+recipe?.id;
+        let url= baseUrl + "removefavorite/"+recipe?.id;
         axios.delete(url);
         setIsInFav(false);
     }

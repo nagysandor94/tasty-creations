@@ -5,6 +5,8 @@ import { IIngredients, Result } from '../model/RecipeModel';
 
 
 const SearchByIngredient = () => {
+    const baseUrl = "https://tasty-creation.azurewebsites.net/";
+
     const [newIngredient, setNewIngredient] = useState<string>("");
 
     const [ingredients, setIngredients] = useState<IIngredients[]>([]);
@@ -14,7 +16,7 @@ const SearchByIngredient = () => {
 
     function addIngredient() {
         if (!newIngredient) {
-            alert("Press enter an ingredient.");
+            alert("Please add an ingredient.");
             return;
         }
 
@@ -40,14 +42,10 @@ const SearchByIngredient = () => {
         setNewIngredient("");
     }
 
-
-
-
-
     function searchRecipe() {
         let queryParam: string = ingredients.map((ingredient) => ingredient.ingredientName).toString();
         console.log(queryParam);
-        axios.get('http://localhost:8080/api/findbyingredients', {
+        axios.get(baseUrl + "api/findbyingredients", {
             params: {
                 query: queryParam
             }
@@ -55,15 +53,14 @@ const SearchByIngredient = () => {
             .then(response => {
                 setSearchResponse(response.data);
                 let searchserialized = JSON.stringify(response.data);
-                sessionStorage.setItem("mySearch", searchserialized);
-                //console.log(localStorage);
+                sessionStorage.setItem("mySearchByIngredient", searchserialized);
             });
 
     }
 
     useEffect(() => {
-        if (sessionStorage.getItem("mySearch")) {
-            const searchHistory = JSON.parse(sessionStorage.getItem("mySearch") || "");
+        if (sessionStorage.getItem("mySearchByIngredient")) {
+            const searchHistory = JSON.parse(sessionStorage.getItem("mySearchByIngredient") || "");
             //console.log(searchHistory);
 
             if (searchHistory) {
@@ -86,7 +83,6 @@ const SearchByIngredient = () => {
 
     }, []);
 
-    /* Deletes an item based on the `item.id` key */
     function deleteItem(id: number) {
         const newArray = ingredients.filter((ingredient) => ingredient.ingredientId !== id);
         setIngredients(newArray);

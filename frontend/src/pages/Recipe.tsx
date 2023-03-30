@@ -8,7 +8,7 @@ import addedToFav from "../images/AddedToFav.png";
 import { useParams } from 'react-router-dom';
 
 const Recipe = () => {
-
+    const baseUrl = "https://tasty-creation.azurewebsites.net/";
 
     const [recipe,setRecipe]=useState<RecipeModel>();
     const [instructionList,setInstructionList]=useState<string[]>([]);
@@ -16,7 +16,7 @@ const Recipe = () => {
     const { id } = useParams<string>();
 
     function getRecipe(recipeId : string) {
-        axios.get<RecipeModel>('http://localhost:8080/api/getrecipe/' + recipeId)
+        axios.get<RecipeModel>( baseUrl + "api/getrecipe/" + recipeId)
             .then(response=>{
                 setRecipe(response.data);
                 setInstructionList(response.data.instructions.split("."));
@@ -31,12 +31,12 @@ const Recipe = () => {
     },[]);
 
     function addRecipeToFavorite() {
-        axios.post("http://localhost:8080/api/addfavorite",recipe);
+        axios.post( baseUrl + "api/addfavorite",recipe);
         setIsInFav(true);
     }
 
     function removeRecipeFromFavorite() {
-        let url="http://localhost:8080/api/removefavorite/"+recipe?.id;
+        let url= baseUrl + "api/removefavorite/"+recipe?.id;
         axios.delete(url);
         setIsInFav(false);
     }
