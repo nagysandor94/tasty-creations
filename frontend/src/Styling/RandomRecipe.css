@@ -70,7 +70,7 @@
 }
 
 .recipeImage{
-    width: 100%;
+    max-width: 50%;
     max-height: 20%;
 
 }
