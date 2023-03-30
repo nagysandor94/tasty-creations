@@ -61,6 +61,7 @@ jobs:
 
         with:
           name: java-app
+          working-directory: ./backend
           path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
