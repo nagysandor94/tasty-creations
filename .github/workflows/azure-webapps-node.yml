@@ -40,7 +40,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Java version
-        uses: actions/setup-java@v3.0.0
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: ${{ env.DISTRIBUTION }}
@@ -51,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/backend/target/*.jar'
+          path: '${{ github.workspace }}/target/*.jar'
   deploy:
     permissions:
       contents: none
