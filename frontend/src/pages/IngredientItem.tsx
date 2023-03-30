@@ -11,12 +11,12 @@ const IngredientItem = (props:ExtendedIngredient) => {
 
     return(
         <div className='ingredientItem'>
-            <text>{data.name}</text>
+            <div>{data.name}</div>
             <br/>
             <img className="ingredientImage" src={imgUrl}></img>
             <br/>
-            <text className="ingredientAmount">{data.amount}</text>
-            <text>{data.measures.metric.unitShort}</text>
+            <div className="ingredientAmount">{data.amount}</div>
+            <div>{data.measures.metric.unitShort}</div>
         </div>
     )
 }
