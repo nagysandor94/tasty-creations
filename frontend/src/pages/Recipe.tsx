@@ -57,7 +57,7 @@ const Recipe = () => {
             <div className="ingredientsSection">
                 <h4 className="ingredientsHeader">Ingredients</h4>
                 <div className="ingredientsList">
-                    {recipe?.extendedIngredients.map(item => <IngredientItem key={item.id} id={item.id} aisle={item.aisle} image={item.image}
+                    {recipe?.extendedIngredients.map(item => <IngredientItem key={recipe.extendedIngredients.indexOf(item)} id={item.id} aisle={item.aisle} image={item.image}
                         name={item.name} amount={item.amount} unit={item.unit}
                         unitShort={item.unitShort} unitLong={item.unitLong}
                         originalString={item.originalString}
@@ -68,7 +68,7 @@ const Recipe = () => {
             <div className="instructionsList">
                 <h3 className="instructionsHeader">Instructions</h3>
                 <ol className="instructionsList" >
-                   {instructionList.map(item => <Instructions key={item} name={item} />)}
+                   {instructionList.map(item => <Instructions key={instructionList.indexOf(item)} name={item} />)}
                 </ol>
             </div>
             <br /><br />
