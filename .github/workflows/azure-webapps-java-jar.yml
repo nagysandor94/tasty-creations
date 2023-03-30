@@ -47,12 +47,18 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: ${{ env.DISTRIBUTION }}
           cache: 'maven'
+          
+
+        
 
       - name: Build with Maven
+        working-directory: ./backend
         run: mvn clean install
 
       - name: Upload artifact for deployment job
+
         uses: actions/upload-artifact@v3
+
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
