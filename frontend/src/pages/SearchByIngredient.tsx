@@ -30,17 +30,10 @@ const SearchByIngredient = () => {
         });
         console.log(arrayOfIngredient);
 
-
-
-
-
         let arrayOfIngredients = arrayOfIngredient.push(ingredient);
         console.log(arrayOfIngredients);
 
         let ingredientsSerialized = JSON.stringify(arrayOfIngredient);
-        console.log(ingredientsSerialized);
-
-
 
        sessionStorage.setItem("myIngredients", ingredientsSerialized);
        console.log(sessionStorage.getItem("myIngredients"))
@@ -78,6 +71,19 @@ const SearchByIngredient = () => {
 
             }
         }
+
+
+        if (sessionStorage.getItem("myIngredients")) {
+            const ingredientshHistory = JSON.parse(sessionStorage.getItem("myIngredients")||"");
+            console.log(ingredientshHistory);
+
+
+            if (ingredientshHistory) {
+                setIngredients(ingredientshHistory);
+
+            }
+        }
+
     }, []);
 
     /* Deletes an item based on the `item.id` key */
