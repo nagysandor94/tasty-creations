@@ -47,10 +47,13 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: ${{ env.DISTRIBUTION }}
           cache: 'maven'
+          
+      - name: Clean temp directory
+        run: rm -rf *
+        working-directory: ./temp
 
       - name: Build with Maven
         run: mvn clean install
-        working-directory: ./backend
 
       - name: Upload artifact for deployment job
 
