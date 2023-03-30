@@ -42,9 +42,10 @@ const RandomRecipe = () => {
 
     return(
         <div className='randomRecipe'>
-            <h1 className="randomRecipeHeader">RandomRecipe</h1>
+            <div className="recipeHeading">{recipe?.title}</div>
+            {/*<h1 className="randomRecipeHeader">RandomRecipe</h1>*/}
             <div className="recipeHeading">
-                <div className="recipeName">{recipe?.title}</div>
+                {/*<div className="recipeName">{recipe?.title}</div>*/}
                 <img className="iconFavorite" src={addToFav} onClick={addRecipeToFavorite}></img>
                 {isInFav &&
                 <img className="iconFavorite" src={addedToFav} onClick={removeRecipeFromFavorite}></img>

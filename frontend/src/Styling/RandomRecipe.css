@@ -66,10 +66,11 @@
     position:relative;
     color: white;
     border-radius: 4%;
+    font-size:xx-large;
 }
 
 .recipeImage{
-    width: 100%;
+    max-width: 50%;
     max-height: 20%;
 
 }
@@ -98,7 +99,7 @@
 .iconFavorite{
     position: absolute;
     top: 12%;
-    right: 5%;
+    right: 25%;
     max-height: 8%;
     width: auto;
     border-radius: 35%;
@@ -107,7 +108,7 @@
 .nextIcon{
     position: absolute;
     bottom: 45%;
-    right: 5%;
+    right: 25%;
     max-height: 8%;
     width: auto;
     border-radius: 50%;

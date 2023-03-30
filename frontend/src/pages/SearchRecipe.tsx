@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IIngredients, SearchRecipeResponse } from "../model/RecipeModel";
 import '../Styling/SearchByIngredient.css';
+import '../Styling/SearchRecipe.css';
 
 
 const SearchRecipe = () => {
@@ -22,7 +23,7 @@ const SearchRecipe = () => {
             }
         })
             .then(response => {
-                setSearchResponse(response.data);        
+                setSearchResponse(response.data);
                 let searchserialized = JSON.stringify(response.data);
                 sessionStorage.setItem("mySearch", searchserialized);
             });
@@ -51,7 +52,7 @@ const SearchRecipe = () => {
     return (
         <>
             <form >
-                <label>Search recipe:
+                <label className="searchRecipe">Search recipe:
                     <input
                         type="text"
                         value={search}

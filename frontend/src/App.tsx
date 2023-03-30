@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './Styling/App.css';
-import { Nav } from 'react-bootstrap';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -10,9 +8,9 @@ import RandomRecipe from "./pages/RandomRecipe";
 import SearchRecipe from './pages/SearchRecipe';
 import Recipe from './pages/Recipe';
 import { Link } from 'react-router-dom';
-import background from "../images/bkgrnd.png";
 import SearchByIngredient from './pages/SearchByIngredient';
 import Welcome from "./pages/Welcome";
+
 
 
 function App() {
