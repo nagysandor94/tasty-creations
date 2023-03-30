@@ -13,7 +13,6 @@ const SearchRecipe = () => {
     const handleSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
         getSearchRecipe();
-        localStorage.setItem('items', JSON.stringify(responseSearch));
 
     }
     function getSearchRecipe() {
@@ -25,9 +24,7 @@ const SearchRecipe = () => {
             .then(response => {
                 setSearchResponse(response.data);        
                 let searchserialized = JSON.stringify(response.data);
-               // console.log(searchserialized);
                 sessionStorage.setItem("mySearch", searchserialized);
-                //console.log(localStorage);
             });
 
     }
