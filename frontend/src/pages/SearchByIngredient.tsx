@@ -34,16 +34,16 @@ const SearchByIngredient = () => {
 
 
 
-        // let arrayOfIngredients = arrayOfIngredient.push(ingredient);
-        // console.log(arrayOfIngredients);
+        let arrayOfIngredients = arrayOfIngredient.push(ingredient);
+        console.log(arrayOfIngredients);
 
         let ingredientsSerialized = JSON.stringify(arrayOfIngredient);
         console.log(ingredientsSerialized);
 
 
 
-       // sessionStorage.setItem("myIngredients", ingredientsSerialized);
-       // console.log(sessionStorage.getItem("myIngredients"))
+       sessionStorage.setItem("myIngredients", ingredientsSerialized);
+       console.log(sessionStorage.getItem("myIngredients"))
         setNewIngredient("");
     }
 
