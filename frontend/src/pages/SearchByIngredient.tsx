@@ -91,7 +91,7 @@ const SearchByIngredient = () => {
 
     return (
         <>
-            <div className="">
+            <div className="text">
                 <h1>What's in your fridge?</h1>
                 <p>Add a new ingredient to your list!</p>
 

@@ -9,6 +9,10 @@
 	min-height: auto;
     display: grid;
 }
+.text{
+	font-family: "American Typewriter";
+	color:wheat;
+}
 
 
 .fridgeList {
