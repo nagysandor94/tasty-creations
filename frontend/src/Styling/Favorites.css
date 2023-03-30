@@ -9,16 +9,15 @@
 .favoritesDashboard{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
 }
 
 
-/*.favoritesCard {*/
-/*  transform-origin:200% center;*/
-/*    position:relative;*/
-/*    animation:rotate 3s linear infinite;*/
-/*}*/
+.favoritesCard {
+  transform-origin:200% center;
+    position:relative;
+    animation:rotate 3s linear infinite;
+}
 
 .favoritesCard:hover{
     background-color: rgba(51,204,204,0.4); /* Fallback color */
