@@ -6,7 +6,6 @@ import Instructions from './Instructions';
 import addToFav from "../images/AddToFav.png";
 import addedToFav from "../images/AddedToFav.png";
 import { useParams } from 'react-router-dom';
-import { randomUUID } from 'crypto';
 
 const Recipe = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
@@ -21,7 +20,6 @@ const Recipe = () => {
             .then(response => {
                 setRecipe(response.data);
                 setInstructionList(response.data.instructions.split("."));
-                //console.log(response.data);
             });
     }
 

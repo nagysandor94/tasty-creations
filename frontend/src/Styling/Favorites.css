@@ -4,8 +4,6 @@
     padding-bottom: 8%;
     backdrop-filter: blur(20px);
     color: wheat;
-
-
 }
 
 .favoritesDashboard{
@@ -50,6 +48,4 @@
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
 }
 
-.favoriteRecipeName{
 
-}
