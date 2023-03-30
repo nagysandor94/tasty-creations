@@ -1,6 +1,6 @@
 .randomRecipeHeader{
     color: white;
-    font-size: 5vw;
+    font-size: 3vw;
     backdrop-filter: blur(5px);
 }
 
@@ -10,7 +10,7 @@
 
 .ingredientsHeader{
     color: white;
-    font-size: 4vw;
+    font-size: 2vw;
     font-family: Avenir;
     background-color: rgba(51,204,204,0.6);
 }
@@ -70,7 +70,7 @@
 }
 
 .recipeImage{
-    max-width: 50%;
+    width: 100%;
     max-height: 20%;
 
 }
@@ -88,12 +88,13 @@
 
 .recipeName {
     font-family: Avenir;
-    font-size: 5vw;
+    font-size: 2vw;
     text-align: center;
     width: 100%;
     top: 50%;
     left: 50%;
-    background-color: rgba(51,204,204,0.9);
+    background-color: rgba(51,204,204,0.6);
+
 }
 
 .iconFavorite{

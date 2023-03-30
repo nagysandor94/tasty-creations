@@ -8,15 +8,17 @@ import"../Styling/Favorites.css";
 
 const Favorites = () => {
 
+    const baseUrl = "https://tasty-creation.azurewebsites.net/";
+
     const [favoritesList,setFavoritesList]=useState<FavoritesListResponse>();
 
     function getFavorites(){
-        axios.get<FavoritesListResponse>("http://localhost:8080/api/favorites")
+        axios.get<FavoritesListResponse>(baseUrl + "api/favorites")
             .then(response=>{setFavoritesList(response.data)})
     }
 
     function removeRecipeFromFavorite(props:string) {
-        let url="http://localhost:8080/api/removefavorite/"+props;
+        let url= baseUrl + "api/removefavorite/"+props;
         axios.delete(url);
         getFavorites();
     }

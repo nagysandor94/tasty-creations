@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Styling/SearchRecipe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/Favorites.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/Favorites.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/RandomRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/RandomRecipe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/SearchRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/SearchRecipe.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,6 +147,7 @@
       <workItem from="1680079040510" duration="1543000" />
       <workItem from="1680160552523" duration="4295000" />
       <workItem from="1680179930130" duration="668000" />
+      <workItem from="1680160552523" duration="5364000" />
     </task>
     <servers />
   </component>

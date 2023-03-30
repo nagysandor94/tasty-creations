@@ -7,6 +7,7 @@ import '../Styling/SearchRecipe.css';
 
 
 const SearchRecipe = () => {
+    const baseUrl = "https://tasty-creation.azurewebsites.net/";
     const [search, setSearch] = useState<string>("");
     const [responseSearch, setSearchResponse] = useState<SearchRecipeResponse>();
     const [items, setItems] = useState<SearchRecipeResponse>();
@@ -17,7 +18,7 @@ const SearchRecipe = () => {
 
     }
     function getSearchRecipe() {
-        axios.get<SearchRecipeResponse>('http://localhost:8080/api/searchrecipebyname', {
+        axios.get<SearchRecipeResponse>( baseUrl+ "api/searchrecipebyname", {
             params: {
                 query: search
             }

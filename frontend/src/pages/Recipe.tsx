@@ -8,63 +8,70 @@ import addedToFav from "../images/AddedToFav.png";
 import { useParams } from 'react-router-dom';
 
 const Recipe = () => {
+    const baseUrl = "https://tasty-creation.azurewebsites.net/";
 
-
-    const [recipe,setRecipe]=useState<RecipeModel>();
-    const [instructionList,setInstructionList]=useState<string[]>([]);
-    const [isInFav,setIsInFav]=useState<boolean>(false);
+    const [recipe, setRecipe] = useState<RecipeModel>();
+    const [instructionList, setInstructionList] = useState<string[]>([]);
+    const [isInFav, setIsInFav] = useState<boolean>(false);
     const { id } = useParams<string>();
 
-    function getRecipe(recipeId : string) {
-        axios.get<RecipeModel>('http://localhost:8080/api/getrecipe/' + recipeId)
-            .then(response=>{
+    function getRecipe(recipeId: string) {
+        axios.get<RecipeModel>(baseUrl + "api/getrecipe/" + recipeId)
+            .then(response => {
                 setRecipe(response.data);
                 setInstructionList(response.data.instructions.split("."));
-                //console.log(response.data);
             });
     }
 
-    useEffect(()=>{
-        if(id){
+    useEffect(() => {
+        if (id) {
             getRecipe(id);
         }
-    },[]);
+    }, []);
 
     function addRecipeToFavorite() {
-        axios.post("http://localhost:8080/api/addfavorite",recipe);
+        axios.post(baseUrl + "api/addfavorite", recipe);
         setIsInFav(true);
     }
 
     function removeRecipeFromFavorite() {
-        let url="http://localhost:8080/api/removefavorite/"+recipe?.id;
+        let url = baseUrl + "api/removefavorite/" + recipe?.id;
         axios.delete(url);
         setIsInFav(false);
     }
 
-    return(
+    return (
         <div className='randomRecipe'>
-            <h1>Recipe</h1>
+            <h1 className="randomRecipeHeader">Recipe</h1>
             <div className="recipeHeading">
-            <img className="recipeImage" src={recipe?.image}></img>
                 <div className="recipeName">{recipe?.title}</div>
                 <img className="iconFavorite" src={addToFav} onClick={addRecipeToFavorite}></img>
                 {isInFav &&
-                <img className="iconFavorite" src={addedToFav} onClick={removeRecipeFromFavorite}></img>
+                    <img className="iconFavorite" src={addedToFav} onClick={removeRecipeFromFavorite}></img>
                 }
+                <img className="recipeImage" src={recipe?.image}></img>
             </div>
-            <h4>Ingredients</h4>
-            <div className="ingredientsList">
-            {recipe?.extendedIngredients.map(item=><IngredientItem id={item.id} aisle={item.aisle} image={item.image}
-                                                                   name={item.name} amount={item.amount} unit={item.unit}
-                                                                   unitShort={item.unitShort} unitLong={item.unitLong}
-                                                                   originalString={item.originalString}
-                                                                   metaInformation={item.metaInformation} measures={item.measures}/>)}
+
+            <div className="ingredientsSection">
+                <h4 className="ingredientsHeader">Ingredients</h4>
+                <div className="ingredientsList">
+                    {recipe?.extendedIngredients.map(item => <IngredientItem key={recipe.extendedIngredients.indexOf(item)} id={item.id} aisle={item.aisle} image={item.image}
+                        name={item.name} amount={item.amount} unit={item.unit}
+                        unitShort={item.unitShort} unitLong={item.unitLong}
+                        originalString={item.originalString}
+                        metaInformation={item.metaInformation} measures={item.measures} />)}
+                </div>
             </div>
-            <h4>Instructions</h4>
-            <ol className="instructionsList">
-            {instructionList.map(item=><Instructions name={item}/>)}
-            </ol>
+
+            <div className="instructionsList">
+                <h3 className="instructionsHeader">Instructions</h3>
+                <ol className="instructionsList" >
+                   {instructionList.map(item => <Instructions key={instructionList.indexOf(item)} name={item} />)}
+                </ol>
             </div>
+            <br /><br />
+
+        </div>
     );
 
 }
