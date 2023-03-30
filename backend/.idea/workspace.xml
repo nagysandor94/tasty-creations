@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="" />
+    <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,7 +151,7 @@
       <workItem from="1680179930130" duration="668000" />
       <workItem from="1680160552523" duration="5364000" />
       <workItem from="1680185841338" duration="490000" />
-      <workItem from="1680188417995" duration="3205000" />
+      <workItem from="1680188417995" duration="3986000" />
     </task>
     <servers />
   </component>
