@@ -9,7 +9,7 @@ import"../Styling/Favorites.css";
 const Favorites = () => {
 
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
-
+    //const baseUrl = "http://localhost:8080/";
     const [favoritesList,setFavoritesList]=useState<FavoritesListResponse>();
 
     function getFavorites(){

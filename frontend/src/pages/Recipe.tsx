@@ -6,10 +6,11 @@ import Instructions from './Instructions';
 import addToFav from "../images/AddToFav.png";
 import addedToFav from "../images/AddedToFav.png";
 import { useParams } from 'react-router-dom';
+import "../Styling/Recipe.css"
 
 const Recipe = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
-
+    //const baseUrl = "http://localhost:8080/";
     const [recipe, setRecipe] = useState<RecipeModel>();
     const [instructionList, setInstructionList] = useState<string[]>([]);
     const [isInFav, setIsInFav] = useState<boolean>(false);
@@ -20,6 +21,8 @@ const Recipe = () => {
             .then(response => {
                 setRecipe(response.data);
                 setInstructionList(response.data.instructions.split("."));
+                setIsInFav(response.data.isInFav)
+                console.log(response.data.isInFav)
             });
     }
 
@@ -42,9 +45,8 @@ const Recipe = () => {
 
     return (
         <div className='randomRecipe'>
-            <h1 className="randomRecipeHeader">Recipe</h1>
+            <h1 className="randomRecipeHeader">{recipe?.title}</h1>
             <div className="recipeHeading">
-                <div className="recipeName">{recipe?.title}</div>
                 <img className="iconFavorite" src={addToFav} onClick={addRecipeToFavorite}></img>
                 {isInFav &&
                     <img className="iconFavorite" src={addedToFav} onClick={removeRecipeFromFavorite}></img>

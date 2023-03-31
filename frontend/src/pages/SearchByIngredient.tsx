@@ -6,6 +6,7 @@ import { IIngredients, Result } from '../model/RecipeModel';
 
 const SearchByIngredient = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
+    //const baseUrl = "http://localhost:8080/";
 
     const [newIngredient, setNewIngredient] = useState<string>("");
 

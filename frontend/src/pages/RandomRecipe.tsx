@@ -12,6 +12,7 @@ import nextIcon from "../images/NextIcon.png";
 
 const RandomRecipe = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
+    //const baseUrl = "http://localhost:8080/";
 
     const [recipe, setRecipe] = useState<RecipeModel>();
     const [instructionList, setInstructionList] = useState<string[]>([]);
@@ -44,11 +45,8 @@ const RandomRecipe = () => {
 
     return (
         <div className='randomRecipe'>
-            {/* <h1 className="randomRecipeHeader">RandomRecipe</h1> */}
             <h1 className="randomRecipeHeader">{recipe?.title}</h1>
-
             <div className="recipeHeading">
-                {/* <div className="recipeName">{recipe?.title}</div> */}
                 <img className="iconFavorite" src={addToFav} onClick={addRecipeToFavorite}></img>
                 {isInFav &&
                     <img className="iconFavorite" src={addedToFav} onClick={removeRecipeFromFavorite}></img>

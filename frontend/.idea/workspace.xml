@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef4463d-557c-426a-a111-6128f57c6c6d" name="Changes" comment="&quot;Image-size&quot;">
+    <list default="true" id="3ef4463d-557c-426a-a111-6128f57c6c6d" name="Changes" comment="&quot;Fav-card&quot;">
+      <change afterPath="$PROJECT_DIR$/src/Styling/Recipe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/RecipeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styling/Favorites.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Favorites.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styling/ingredientItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/ingredientItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Favorites.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Favorites.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/IngredientItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/IngredientItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Recipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Recipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SearchByIngredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchByIngredient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SearchRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchRecipe.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +98,9 @@
       <workItem from="1680094838810" duration="15885000" />
       <workItem from="1680161710960" duration="1227000" />
       <workItem from="1680179981944" duration="4218000" />
-      <workItem from="1680184311343" duration="309000" />
+      <workItem from="1680184311343" duration="1589000" />
+      <workItem from="1680201222648" duration="93000" />
+      <workItem from="1680201321737" duration="10492000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Random front end&quot;">
       <created>1679839288774</created>
@@ -114,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680184381841</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;Fav-card&quot;">
+      <created>1680184705916</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680184705916</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +159,7 @@
     <MESSAGE value="&quot;Random front end&quot;" />
     <MESSAGE value="&quot;Edits&quot;" />
     <MESSAGE value="&quot;Image-size&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Image-size&quot;" />
+    <MESSAGE value="&quot;Fav-card&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Fav-card&quot;" />
   </component>
 </project>

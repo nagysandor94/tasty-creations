@@ -8,6 +8,7 @@ import '../Styling/SearchRecipe.css';
 
 const SearchRecipe = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
+   //  const baseUrl ="http://localhost:3000"
     const [search, setSearch] = useState<string>("");
     const [responseSearch, setSearchResponse] = useState<SearchRecipeResponse>();
     const [items, setItems] = useState<SearchRecipeResponse>();

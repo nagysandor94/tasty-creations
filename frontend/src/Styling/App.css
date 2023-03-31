@@ -5,20 +5,18 @@
   background-image: url("../images/Backgroundv1.jpg");
   /*background-size: cover;*/
   background-size: 100%;
-  background-position: center;
+  /*background-position: center;*/
   background-repeat: no-repeat;
 }
 
 
-@media only screen and (min-width: 1000px) {
-  .App{
-    /*background-color: whitesmoke;*/
-    /*background-image: url("../images/AppBackground.jpg");*/
-    background-size: cover;
-  }
-
-
-}
+/*@media only screen and (min-width: 1000px) {*/
+/*  .App{*/
+/*    !*background-color: whitesmoke;*!*/
+/*    !*background-image: url("../images/AppBackground.jpg");*!*/
+/*    background-size: cover;*/
+/*  }*/
+/*}*/
 .appHeader{
   font-family: Avenir;
   font-size: 6vw;

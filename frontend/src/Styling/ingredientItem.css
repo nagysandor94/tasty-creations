@@ -1,0 +1,5 @@
+.ingredientImage{
+    max-height: 40%;
+    width: 10%;
+    object-fit: contain;
+}
