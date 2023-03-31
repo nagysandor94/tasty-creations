@@ -49,6 +49,10 @@ public class Recipe {
     public String getImageType() {
         return imageType;
     }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
 }
 
 
