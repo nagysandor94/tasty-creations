@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record ResponseSearchByName(
         @JsonProperty("id")
-        String id,
+        Integer id,
 
         @JsonProperty("title")
         String title,

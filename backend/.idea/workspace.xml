@@ -5,7 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../frontend/src/images/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/images/lover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RecipeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/RecipeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/ResponseSearchByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/RecipeObject/ResponseSearchByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/backend/TsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_03_2023,_17_13_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_03_2023__17_13__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/Favorites.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/Favorites.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/RandomRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/RandomRecipe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/ingredientItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/ingredientItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Favorites.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Favorites.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/IngredientItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/IngredientItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/RandomRecipe.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +171,7 @@
       <workItem from="1680160552523" duration="5364000" />
       <workItem from="1680185841338" duration="490000" />
       <workItem from="1680188417995" duration="4855000" />
+      <workItem from="1680438855185" duration="1119000" />
     </task>
     <servers />
   </component>

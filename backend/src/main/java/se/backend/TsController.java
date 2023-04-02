@@ -4,13 +4,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import se.backend.RecipeObject.FavoriteRecipeDTO;
 import se.backend.RecipeObject.ListResponseSearchByName;
-import se.backend.RecipeObject.RandomRecipeDTO;
+import se.backend.RecipeObject.RecipeDTO;
 import se.backend.RecipeObject.Recipe;
 
 import java.io.IOException;
 import se.backend.RecipeObject.*;
 
-import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class TsController {
     TsService service;
 
     @GetMapping("/random")
-    public ResponseEntity<RandomRecipeDTO> getRandomRecipe() throws IOException, InterruptedException, URISyntaxException {
+    public ResponseEntity<RecipeDTO> getRandomRecipe() throws IOException, InterruptedException, URISyntaxException {
         return  ResponseEntity.ok(service.getRandomRecipe());
     }
 
@@ -38,12 +37,12 @@ public class TsController {
     }
 
     @GetMapping("getrecipe/{id}")
-    public ResponseEntity<Recipe> getRecipeById(@PathVariable String id) throws IOException, InterruptedException, URISyntaxException {
+    public ResponseEntity<RecipeDTO> getRecipeById(@PathVariable String id) throws IOException, InterruptedException, URISyntaxException {
         return ResponseEntity.ok(service.getRecipeById(id));
     }
 
     @PostMapping("/addfavorite")
-    public ResponseEntity<Object> addRecipeToFavorites(@RequestBody RandomRecipeDTO newRecipe){
+    public ResponseEntity<Object> addRecipeToFavorites(@RequestBody RecipeDTO newRecipe){
         if(!service.recipeInFavorites(newRecipe.id()))
             service.addRecipeToFavorite(newRecipe);
         return ResponseEntity.ok().build();

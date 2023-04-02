@@ -1,27 +1,20 @@
 package se.backend;
 
 
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.utils.URIBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import se.backend.RecipeObject.*;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.List;
-import java.util.stream.Stream;
 
 @Service
 public class TsService {
@@ -37,7 +30,7 @@ public class TsService {
 
     private String apiKeyS = System.getenv("API_KEY_S");
 
-    public RandomRecipeDTO getRandomRecipe() throws IOException, InterruptedException, URISyntaxException {
+    public RecipeDTO getRandomRecipe() throws IOException, InterruptedException, URISyntaxException {
 
         URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/random");
         uriBuilder.addParameter("apiKey", apiKeyS);
@@ -52,12 +45,12 @@ public class TsService {
         return toDTO(randomRecipeObject.recipes.get(0));
     }
 
-    public RandomRecipeDTO toDTO(Recipe recipe) {
-        return new RandomRecipeDTO(recipe.id, recipe.title, recipe.extendedIngredients,
+    public RecipeDTO toDTO(Recipe recipe) {
+        return new RecipeDTO(recipe.id, recipe.title, recipe.extendedIngredients,
                                    recipe.instructions.replaceAll("<[^>]*>", ""), recipe.image,recipeInFavorites(recipe.id));
     }
 
-    public boolean addRecipeToFavorite(RandomRecipeDTO newRecipe) {
+    public boolean addRecipeToFavorite(RecipeDTO newRecipe) {
         repo.AddFavorite(newRecipe.id(), newRecipe.title(), newRecipe.image());
         return true;
     }
@@ -83,7 +76,7 @@ public class TsService {
     }
 
 
-    public Recipe getRecipeById(String id) throws IOException, InterruptedException, URISyntaxException {
+    public RecipeDTO getRecipeById(String id) throws IOException, InterruptedException, URISyntaxException {
 
         URIBuilder uriBuilder = new URIBuilder("https://api.spoonacular.com/recipes/" + id + "/information");
         uriBuilder.addParameter("apiKey", apiKeyS);
@@ -94,7 +87,7 @@ public class TsService {
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
         Recipe recipe = mapper.readValue(response.body(), Recipe.class);
         recipe.setInstructions(recipe.instructions.replaceAll("<[^>]*>", ""));
-        return recipe;
+        return toDTO(recipe);
 
     }
 
