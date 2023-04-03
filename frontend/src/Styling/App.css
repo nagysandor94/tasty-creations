@@ -1,13 +1,14 @@
 .App {
-  padding: 3%;
+   padding: 3%;
   text-align: center;
   background-size: cover;
   /*background-size: 100%;*/
   background: black url("../images/BlackTextureBackground.jpg") repeat fixed center;
+  height: 100%;
 }
 
 .appContent{
-  padding-bottom: 56vh;
+  padding-bottom: 60vh;
   overflow:hidden;
 }
 
@@ -15,7 +16,7 @@
   .appContent{
     /*background-color: whitesmoke;*/
     /*background-image: url("../images/AppBackground.jpg");*/
-    padding-bottom: 2%;
+    padding-bottom: 20vh;
   }
 }
 
