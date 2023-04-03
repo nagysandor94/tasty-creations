@@ -22,6 +22,12 @@ public class Recipe {
     @JsonProperty("instructions")
     public String instructions;
 
+    @JsonProperty("servings")
+    public int servings;
+
+    @JsonProperty("summary")
+    public String summary;
+
     public ArrayList<ExtendedIngredient> getExtendedIngredients() {
         return extendedIngredients;
     }

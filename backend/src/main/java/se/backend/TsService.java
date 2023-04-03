@@ -47,7 +47,7 @@ public class TsService {
 
     public RecipeDTO toDTO(Recipe recipe) {
         return new RecipeDTO(recipe.id, recipe.title, recipe.extendedIngredients,
-                                   recipe.instructions.replaceAll("<[^>]*>", ""), recipe.image,recipeInFavorites(recipe.id));
+                                   recipe.instructions.replaceAll("<[^>]*>", ""), recipe.image,recipeInFavorites(recipe.id),recipe.summary, recipe.servings);
     }
 
     public boolean addRecipeToFavorite(RecipeDTO newRecipe) {

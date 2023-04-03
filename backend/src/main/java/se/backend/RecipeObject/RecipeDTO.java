@@ -9,6 +9,8 @@ public record RecipeDTO(
         ArrayList<ExtendedIngredient> extendedIngredients,
         String instructions,
         String image,
-        Boolean isInFav
+        Boolean isInFav,
+        String summary,
+        Integer servings
 
 ){}
