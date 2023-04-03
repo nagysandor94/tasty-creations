@@ -54,7 +54,7 @@ const RandomRecipe = () => {
                 <img className="nextIcon" src={nextIcon} onClick={getRandomRecipe}></img>
                 <img className="recipeImage" src={recipe?.image}></img>
             </div>
-<div className="recipeSection">
+        <div className="recipeSection">
             <div className="ingredientsSection">
                 <h4></h4>
                 <div className="wrap-collapsible">

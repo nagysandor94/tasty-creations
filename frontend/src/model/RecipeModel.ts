@@ -5,6 +5,8 @@ export interface RecipeModel {
     instructions: string
     image: string
     isInFav: boolean
+    servings:number
+    summary: string
 }
 
 export interface ExtendedIngredient {

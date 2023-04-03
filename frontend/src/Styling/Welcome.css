@@ -1,13 +1,36 @@
-.welcomeQuote{
-    font-family: Avenir;
-    text-align: -webkit-center;
-    padding-bottom: 520px;
-    color: wheat;
-    padding-top:2%;
+
+.welcomeRecipeSection{
+    color: white;
 }
 
-@media only screen and (min-width: 1000px ) {
-    .welcomeQuote{
-        padding-bottom: 800px;
-    }
+.welcomeRecipeHeading{
+    color: white;
+    padding-top: 4%;
+}
+
+
+.welcomeRecipeImage{
+    width: 15rem;
+    height:auto;
+    padding: 1%;
+    margin-left: 7%;
+    float: left;
+}
+
+.recipeSummary{
+    font-size: calc(10px + 0.390625vw);
+    font-family: Avenir;
+    text-align: justify;
+    color: white;
+}
+
+.recipeSummary:first-child:first-letter {
+    font-size: calc(60px + 0.75vw);
+    line-height: 40px;
+    color: indianred;
+    float: left;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 5px;
+    font-family: Sansita One;
 }

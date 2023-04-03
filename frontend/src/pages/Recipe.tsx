@@ -59,6 +59,7 @@ const Recipe = () => {
                     <input id="collapsible" className="ingredientListToggleCheck" type="checkbox"/>
                     <label htmlFor="collapsible" className="lbl-toggle">Ingredients</label>
                     <div className="collapsible-content">
+                        <div className="recipeServings">Servings : {recipe?.servings}</div>
                         <div className="ingredientsList">
                             {recipe?.extendedIngredients.map(item => <IngredientItem key={recipe.extendedIngredients.indexOf(item)} id={item.id} aisle={item.aisle} image={item.image}
                                                                                      name={item.name} amount={item.amount} unit={item.unit}

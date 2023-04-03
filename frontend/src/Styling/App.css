@@ -4,6 +4,7 @@
   background-size: cover;
   /*background-size: 100%;*/
   background: black url("../images/BlackTextureBackground.jpg") repeat fixed center;
+  /*background: black url("../images/recipesbg.jpg") no-repeat scroll top;*/
   height: 100%;
 }
 
@@ -31,6 +32,10 @@
   color:wheat;
 }
 
+.logo{
+  width: 50px;
+  height: 50px;
+}
 .pageBanner {
   display: flex;
   flex-wrap: wrap;
@@ -57,6 +62,7 @@
   padding: 8px;
   color: whitesmoke;
   text-decoration: none;
+  border: solid white;
 }
 
 .appFooter{
