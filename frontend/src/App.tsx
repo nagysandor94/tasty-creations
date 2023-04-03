@@ -9,22 +9,29 @@ import SearchRecipe from './pages/SearchRecipe';
 import Recipe from './pages/Recipe';
 import { Link } from 'react-router-dom';
 import SearchByIngredient from './pages/SearchByIngredient';
-import Welcome from "./pages/Welcome";
 
 
 
 function App() {
   return (
     <div className="App">
-        <h1 className='appHeader'>TASTY CREATIONS</h1>
+        <div className="appHeader">
+        <h1 className='appName'>TASTY CREATIONS</h1>
         <div className='pageBanner'>
-            <Link className='linkBanner' to="/home">Home</Link>
-            <Link className='linkBanner' to="/about">About</Link>
-            <Link className='linkBanner' to="/favorites">Favorites</Link>
+            <div className='bannerItem'>
+                <Link className='linkBanner' to="/">Home</Link>
+            </div>
+            <div className='bannerItem'>
+                <Link className='linkBanner' to="/about">About</Link>
+            </div>
+            <div className='bannerItem'>
+                <Link className='linkBanner' to="/favorites">Favorites</Link>
+            </div>
         </div>
+        </div>
+        <div className="appContent">
       <Routes>
-          <Route path='/' element={<Welcome/>}></Route>
-          <Route path='/home' element={<Home/>}> </Route>
+          <Route path='/' element={<Home/>}> </Route>
           <Route path='/about' element={<About/>}> </Route>
           <Route path='/favorites' element={<Favorites/>}> </Route>
           <Route path='/randomrecipe' element={<RandomRecipe/>}></Route>
@@ -32,7 +39,12 @@ function App() {
           <Route path='/recipe/:id' element={<Recipe />}></Route>
           <Route path='/byingredients' element={<SearchByIngredient />}></Route>
       </Routes>
+        </div>
+        <div className="appFooter">
+            <text>App by Poppies ©</text>
+        </div>
     </div>
+
   );
 }
 

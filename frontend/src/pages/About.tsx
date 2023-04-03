@@ -3,8 +3,7 @@ import '../Styling/About.css';
 
 const About = () => {
     return(
-        <div>
-        <h1>About</h1>
+        <div className="aboutText">
             <p>
                 This  is a Recipe Application developed for users who like to try yummy recipes.
                 You can try a random recipe , a recipe by name,

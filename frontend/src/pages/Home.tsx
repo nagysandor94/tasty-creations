@@ -11,13 +11,11 @@ const Home = () => {
 
     return(
         <div>
-            <h1 className="homeHeader"><em>HOME</em></h1>
         <div className='homePage'>
             <div className='homePageCards'>
-                <Link to="/randomrecipe"><h3 className='card'>Random Recipe</h3></Link>
-                <Link to="/byrecipe"><h3 className='card'>By Recipe</h3></Link>
-                <Link to="/byingredients"><h3 className='card'>By Ingredients</h3></Link>
-                <Link to="partyrecipe"><h3 className='card'>Recipe for Party</h3></Link>
+                <Link className="homePageLink" to="/randomrecipe"><h3 className='card'>Random Recipe</h3></Link>
+                <Link className="homePageLink"  to="/byrecipe"><h3 className='card'>By Recipe</h3></Link>
+                <Link className="homePageLink"  to="/byingredients"><h3 className='card'>By Ingredients</h3></Link>
                 <br/>
             </div>
         </div>

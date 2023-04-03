@@ -1,27 +1,29 @@
 .App {
   padding: 3%;
   text-align: center;
-  background-color: black;
-  background-image: url("../images/Backgroundv1.jpg");
-  /*background-size: cover;*/
-  background-size: 100%;
-  /*background-position: center;*/
-  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-size: 100%;*/
+  background: black url("../images/BlackTextureBackground.jpg") repeat fixed center;
 }
 
+.appContent{
+  padding-bottom: 56vh;
+  overflow:hidden;
+}
 
-/*@media only screen and (min-width: 1000px) {*/
-/*  .App{*/
-/*    !*background-color: whitesmoke;*!*/
-/*    !*background-image: url("../images/AppBackground.jpg");*!*/
-/*    background-size: cover;*/
-/*  }*/
-/*}*/
-.appHeader{
+@media only screen and (min-width: 800px) {
+  .appContent{
+    /*background-color: whitesmoke;*/
+    /*background-image: url("../images/AppBackground.jpg");*/
+    padding-bottom: 2%;
+  }
+}
+
+.appName{
   font-family: Avenir;
-  font-size: 6vw;
+  font-size: 2rem;
   width: 100%;
-  padding: 30px 0;
+  /*padding: 30px 0;*/
   text-align: center;
   /*background: #33cccc;*/
   background: transparent;
@@ -32,21 +34,31 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  font-size: 3vw;
+  font-size: 1rem;
   overflow: hidden;
-  background:#004d4d;
+  /*background:#004d4d;*/
   /*background: #33cccc;*/
-  padding: 10px 0;
+  padding: 2px 0;
   color:black;
-  margin-bottom: 2em;
+  /*margin-bottom: 2em;*/
+  align-items: center;
+}
+
+.bannerItem:hover{
+  color: #3DC795;
+  box-shadow: 0 -2px 0 0 #3DC795 inset;
+  -webkit-transition: box-shadow .2s linear;
+  transition: box-shadow .2s linear;
 }
 
 
 .linkBanner {
   padding: 8px;
   color: whitesmoke;
+  text-decoration: none;
 }
 
-.linkBanner:hover{
-  background-color: rgba(0,0,0,0.4);
+.appFooter{
+font-family: Avenir;
+  color: white;
 }

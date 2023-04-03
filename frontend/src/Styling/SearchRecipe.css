@@ -1,5 +1,9 @@
 .searchRecipe{
-
-    background: black;
     color: whitesmoke;
+}
+
+.searchRecipeForm{
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
 }

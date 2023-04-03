@@ -5,22 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ef4463d-557c-426a-a111-6128f57c6c6d" name="Changes" comment="&quot;Fav-card&quot;">
-      <change afterPath="$PROJECT_DIR$/src/Styling/Recipe.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/BlackTextureBackground.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/backgroundpattern.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/RandomRecipeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/RecipeObject/RecipeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/se/backend/TsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_03_2023,_17_13_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_03_2023__17_13__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styling/Favorites.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Favorites.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styling/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styling/SearchRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/SearchRecipe.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styling/ingredientItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/ingredientItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Favorites.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Favorites.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/IngredientItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/IngredientItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Recipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Recipe.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SearchByIngredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchByIngredient.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SearchRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchRecipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Welcome.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,23 +60,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/src/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "web.server",
+    "ts.external.directory.path": "/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/images" />
@@ -101,6 +108,9 @@
       <workItem from="1680184311343" duration="1589000" />
       <workItem from="1680201222648" duration="93000" />
       <workItem from="1680201321737" duration="10492000" />
+      <workItem from="1680385011604" duration="2000" />
+      <workItem from="1680385043621" duration="1463000" />
+      <workItem from="1680422189494" duration="24500000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Random front end&quot;">
       <created>1679839288774</created>

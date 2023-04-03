@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { RecipeModel } from '../model/RecipeModel';
 import IngredientItem from './IngredientItem';
 import Instructions from './Instructions';
-import addToFav from "../images/AddToFav.png";
-import addedToFav from "../images/AddedToFav.png";
+import addToFav from "../images/heart.png";
+import addedToFav from "../images/lover.png";
 import { useParams } from 'react-router-dom';
 import "../Styling/Recipe.css"
 
 const Recipe = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
-    //const baseUrl = "http://localhost:8080/";
+    // const baseUrl = "http://localhost:8080/";
     const [recipe, setRecipe] = useState<RecipeModel>();
     const [instructionList, setInstructionList] = useState<string[]>([]);
     const [isInFav, setIsInFav] = useState<boolean>(false);
@@ -53,18 +53,22 @@ const Recipe = () => {
                 }
                 <img className="recipeImage" src={recipe?.image}></img>
             </div>
-
             <div className="ingredientsSection">
-                <h4 className="ingredientsHeader">Ingredients</h4>
-                <div className="ingredientsList">
-                    {recipe?.extendedIngredients.map(item => <IngredientItem key={recipe.extendedIngredients.indexOf(item)} id={item.id} aisle={item.aisle} image={item.image}
-                        name={item.name} amount={item.amount} unit={item.unit}
-                        unitShort={item.unitShort} unitLong={item.unitLong}
-                        originalString={item.originalString}
-                        metaInformation={item.metaInformation} measures={item.measures} />)}
+                <h4></h4>
+                <div className="wrap-collapsible">
+                    <input id="collapsible" className="ingredientListToggleCheck" type="checkbox"/>
+                    <label htmlFor="collapsible" className="lbl-toggle">Ingredients</label>
+                    <div className="collapsible-content">
+                        <div className="ingredientsList">
+                            {recipe?.extendedIngredients.map(item => <IngredientItem key={recipe.extendedIngredients.indexOf(item)} id={item.id} aisle={item.aisle} image={item.image}
+                                                                                     name={item.name} amount={item.amount} unit={item.unit}
+                                                                                     unitShort={item.unitShort} unitLong={item.unitLong}
+                                                                                     originalString={item.originalString}
+                                                                                     metaInformation={item.metaInformation} measures={item.measures} />)}
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <div className="instructionsList">
                 <h3 className="instructionsHeader">Instructions</h3>
                 <ol className="instructionsList" >

@@ -11,12 +11,13 @@ const IngredientItem = (props:ExtendedIngredient) => {
     let imgUrl="https://spoonacular.com/cdn/ingredients_100x100/"+data.image
     return(
         <div className='ingredientItem'>
-            <div>{data.name}</div>
-            <br/>
+
             <img className="ingredientImage" src={imgUrl}></img>
             <br/>
             <div className="ingredientAmount">{data.amount}</div>
-            <div>{data.measures.metric.unitShort}</div>
+            <div className="ingredientMeasure">{data.measures.metric.unitShort}</div>
+            <br/>
+            <div className="ingredientName">{data.name}</div>
         </div>
     )
 }

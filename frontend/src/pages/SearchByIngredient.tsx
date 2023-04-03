@@ -6,7 +6,7 @@ import { IIngredients, Result } from '../model/RecipeModel';
 
 const SearchByIngredient = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
-    //const baseUrl = "http://localhost:8080/";
+    // const baseUrl = "http://localhost:8080/";
 
     const [newIngredient, setNewIngredient] = useState<string>("");
 
@@ -136,7 +136,7 @@ const SearchByIngredient = () => {
                 <div className='favoritesDashboard'>
                     {responseSearch?.map((response) => {
                         return (<div className='favoritesCard' key={response.id}>
-                            <Link to={`/recipe/${response.id}`}>
+                            <Link className="favCardLink" to={`/recipe/${response.id}`}>
                                 <img className="favoriteRecipeImage" key={response.id} src={response.image} alt="Avatar" />
                                 <div>
 

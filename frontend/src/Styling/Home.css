@@ -8,28 +8,27 @@
 
 /*}*/
 
-.homePage{
-    /*backdrop-filter: blur(10px);*/
-}
-.homeHeader{
-    color: white;
-    font-size: 3vw;
-    backdrop-filter: blur(5pxclea);
+
+/*.homeHeader{*/
+/*    color: white;*/
+/*    font-size: 3vw;*/
+/*    backdrop-filter: blur(5pxclea);*/
+/*}*/
+.homePageLink{
+    text-decoration: none;
 }
 
 .card{
-    padding: 2%;
-    background-color: rgba(51,204,204,0.6); /* Black w/opacity/see-through */
-    background-color: transparent;
-    font-family:Avenir;
-    font-size: 3vw;
-    color:#cccc00;
+    padding: 1%;
+    font-size: 1rem;
+    color:white;
+    font-weight: 400;
 }
 
-.cardLink{
-    padding: 8px;
-    color: black;
-}
+/*.cardLink{*/
+/*    padding: 8px;*/
+/*    color: black;*/
+/*}*/
 
 .homePageCards{
     display: flex;

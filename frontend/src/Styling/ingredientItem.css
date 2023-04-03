@@ -1,5 +1,39 @@
 .ingredientImage{
-    max-height: 40%;
-    width: 10%;
+    max-height: 40px;
+    max-width: 40px;
     object-fit: contain;
+    padding-right: 2%;
 }
+
+.ingredientMeasure{
+    padding-right: 2%;
+    font-weight: 700;
+
+}
+
+.ingredientName{
+
+}
+.ingredientAmount{
+    padding-right: 2%;
+    font-weight: 700;
+}
+
+.ingredientItem{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+    padding: 1%;
+    /*background-color: azure;*/
+    border-radius: 8%;
+    font-size: calc(12px + 0.390625vw);
+    width: 40%;
+    align-items: center;
+}
+/*.ingredientItem*/
+/*{ display: flex;*/
+/*    -webkit-box-align: center;*/
+/*    align-items: center;*/
+/*    break-inside: avoid;*/
+/*}*/

@@ -4,15 +4,15 @@ import axios from "axios";
 import IngredientItem from "./IngredientItem";
 import Instructions from "./Instructions";
 import '../Styling/RandomRecipe.css';
-import addToFav from "../images/AddToFav.png";
-import addedToFav from "../images/AddedToFav.png";
+import addToFav from "../images/heart.png";
+import addedToFav from "../images/lover.png";
 import nextIcon from "../images/NextIcon.png";
 
 
 
 const RandomRecipe = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
-    //const baseUrl = "http://localhost:8080/";
+    // const baseUrl = "http://localhost:8080/";
 
     const [recipe, setRecipe] = useState<RecipeModel>();
     const [instructionList, setInstructionList] = useState<string[]>([]);
@@ -54,19 +54,23 @@ const RandomRecipe = () => {
                 <img className="nextIcon" src={nextIcon} onClick={getRandomRecipe}></img>
                 <img className="recipeImage" src={recipe?.image}></img>
             </div>
-
+<div className="recipeSection">
             <div className="ingredientsSection">
-                <h4 className="ingredientsHeader">Ingredients</h4>
-                <div className="ingredientsList">
-
-                    {recipe?.extendedIngredients.map(item => <IngredientItem key={recipe.extendedIngredients.indexOf(item)} id={item.id} aisle={item.aisle} image={item.image}
-                        name={item.name} amount={item.amount} unit={item.unit}
-                        unitShort={item.unitShort} unitLong={item.unitLong}
-                        originalString={item.originalString}
-                        metaInformation={item.metaInformation} measures={item.measures} />)}
+                <h4></h4>
+                <div className="wrap-collapsible">
+                    <input id="collapsible" className="ingredientListToggleCheck" type="checkbox"/>
+                    <label htmlFor="collapsible" className="lbl-toggle">Ingredients</label>
+                    <div className="collapsible-content">
+                        <div className="ingredientsList">
+                            {recipe?.extendedIngredients.map(item => <IngredientItem key={recipe.extendedIngredients.indexOf(item)} id={item.id} aisle={item.aisle} image={item.image}
+                                                                                     name={item.name} amount={item.amount} unit={item.unit}
+                                                                                     unitShort={item.unitShort} unitLong={item.unitLong}
+                                                                                     originalString={item.originalString}
+                                                                                     metaInformation={item.metaInformation} measures={item.measures} />)}
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <div className="instructionsList">
                 <h3 className="instructionsHeader">Instructions</h3>
                 <ol>
@@ -74,6 +78,7 @@ const RandomRecipe = () => {
                 </ol>
                 {/* <img className="recipeImageFooter" src={recipe?.image}></img> */}
             </div>
+</div>
             <br /><br />
         </div>
 

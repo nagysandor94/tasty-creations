@@ -37,7 +37,7 @@
     position: absolute;
     top: 2%;
     right: 5%;
-    max-height: 3vw;
+    max-height: 1rem;
     width: auto;
     border-radius: 35%;
 }
@@ -48,6 +48,9 @@
 
 .favoriteRecipeName{
     color: white;
+}
+.favCardLink{
+    text-decoration: none;
 }
 
 .favoriteRecipeName:hover{
