@@ -1,0 +1,57 @@
+.favoritesSection{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 8%;
+    color: wheat;
+}
+
+.favoritesDashboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.favoritesCard {
+  /*transform-origin:200% center;*/
+    padding: 1%;
+    position:relative;
+    color: white;
+    max-width: 30%;
+    /*animation:rotate 3s linear infinite;*/
+}
+
+.favoritesCard:hover{
+    background-color: rgba(255,255,255,0.4); /* Fallback color */
+    /*background-color: rgba(51,204,204,0.4); !* Fallback color *!*/
+    /*background-color: rgba(,0,0, 0.4); !* Black w/opacity/see-through *!*/
+}
+
+.favoriteRecipeImage{
+    width: 40%;
+    height: auto;
+    border-radius: 4%;
+}
+
+.favoritesCard .iconFavoriteCard{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    max-height: 3vw;
+    width: auto;
+    border-radius: 35%;
+}
+
+.iconFavoriteCard:hover{
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+}
+
+.favoriteRecipeName{
+    color: white;
+}
+
+.favoriteRecipeName:hover{
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+}
+
+

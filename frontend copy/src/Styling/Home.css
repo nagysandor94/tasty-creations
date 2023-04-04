@@ -1,0 +1,38 @@
+
+/*@media only screen and (min-width: 1000px) {*/
+/*    .homePage{*/
+/*        background-color: whitesmoke;*/
+/*        background-image: url("../images/AppBackground.jpg");*/
+/*        background-size: cover;*/
+/*    }*/
+
+/*}*/
+
+.homePage{
+    /*backdrop-filter: blur(10px);*/
+}
+.homeHeader{
+    color: white;
+    font-size: 3vw;
+    backdrop-filter: blur(5pxclea);
+}
+
+.card{
+    padding: 2%;
+    background-color: rgba(51,204,204,0.6); /* Black w/opacity/see-through */
+    background-color: transparent;
+    font-family:Avenir;
+    font-size: 3vw;
+    color:#cccc00;
+}
+
+.cardLink{
+    padding: 8px;
+    color: black;
+}
+
+.homePageCards{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
