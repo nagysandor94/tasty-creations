@@ -30,19 +30,9 @@ const Welcome = () => {
             });
     }
 
-    function getFavorites(){
-        axios.get<FavoritesListResponse>(baseUrl + "api/favorites")
-            .then(response=>{setFavoritesList(response.data)})
-    }
-
-
     useEffect(() => {
         getRandomRecipe();
     }, []);
-
-    useEffect(()=>{
-        getFavorites();
-    },[])
 
 
     return(
@@ -51,7 +41,7 @@ const Welcome = () => {
             <div className="welcomeRecipeSection">
                 <Link className="favCardLink" to={`/recipe/${recipe1?.id}`}>
                 <div>
-                <img className="welcomeRecipeImage" src={recipe1?.image}></img>
+                <img className="welcomeRecipeImage" src={recipe1?.image} alt="Avatar"></img>
                 </div>
                 <div>
                 <p className="recipeSummary">
@@ -64,7 +54,7 @@ const Welcome = () => {
             <div className="welcomeRecipeSection">
                 <Link className="favCardLink" to={`/recipe/${recipe2?.id}`}>
                     <div>
-                        <img className="welcomeRecipeImage" src={recipe2?.image}></img>
+                        <img className="welcomeRecipeImage" src={recipe2?.image} alt="Avatar"></img>
                     </div>
                     <div>
                         <p className="recipeSummary">
