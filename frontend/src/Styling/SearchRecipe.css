@@ -1,9 +1,37 @@
-.searchRecipe{
-    color: whitesmoke;
-}
 
 .searchRecipeForm{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     padding-top: 2%;
+    box-sizing: border-box;
+    margin-top: 3em;
 }
+
+
+
+.searchRecipe input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    /* float: left; */
+    width: 80%;
+    background: #f1f1f1;
+  }
+
+
+ .searchRecipeForm button {
+    /* float: left; */
+    width: 3em;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+.searchRecipeForm button:hover {
+    background: #0b7dda;
+  }

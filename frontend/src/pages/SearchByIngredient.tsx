@@ -2,22 +2,19 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IIngredients, Result } from '../model/RecipeModel';
+import '../Styling/SearchByIngredient.css';
+import '../Styling/SearchRecipe.css';
 
 
 const SearchByIngredient = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
-    // const baseUrl = "http://localhost:8080/";
-
     const [newIngredient, setNewIngredient] = useState<string>("");
-
     const [ingredients, setIngredients] = useState<IIngredients[]>([]);
-
     const [responseSearch, setSearchResponse] = useState<Result[]>();
-
 
     function addIngredient() {
         if (!newIngredient) {
-            alert("Please add an ingredient.");
+            alert("Please add an ingredient!");
             return;
         }
 
@@ -28,7 +25,7 @@ const SearchByIngredient = () => {
 
         setIngredients((oldList) => [...oldList, ingredient]);
 
-        let arrayOfIngredient = ingredients.map(function(ingredient) {
+        let arrayOfIngredient = ingredients.map(function (ingredient) {
             return ingredient;
         });
         console.log(arrayOfIngredient);
@@ -38,8 +35,8 @@ const SearchByIngredient = () => {
 
         let ingredientsSerialized = JSON.stringify(arrayOfIngredient);
 
-       sessionStorage.setItem("myIngredients", ingredientsSerialized);
-       console.log(sessionStorage.getItem("myIngredients"))
+        sessionStorage.setItem("myIngredients", ingredientsSerialized);
+        console.log(sessionStorage.getItem("myIngredients"))
         setNewIngredient("");
     }
 
@@ -62,8 +59,6 @@ const SearchByIngredient = () => {
     useEffect(() => {
         if (sessionStorage.getItem("mySearchByIngredient")) {
             const searchHistory = JSON.parse(sessionStorage.getItem("mySearchByIngredient") || "");
-            //console.log(searchHistory);
-
             if (searchHistory) {
                 setSearchResponse(searchHistory);
 
@@ -72,7 +67,7 @@ const SearchByIngredient = () => {
 
 
         if (sessionStorage.getItem("myIngredients")) {
-            const ingredientshHistory = JSON.parse(sessionStorage.getItem("myIngredients")||"");
+            const ingredientshHistory = JSON.parse(sessionStorage.getItem("myIngredients") || "");
             console.log(ingredientshHistory);
 
 
@@ -94,43 +89,59 @@ const SearchByIngredient = () => {
 
     return (
         <>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <div className="text">
                 <h1>What's in your fridge?</h1>
-                <p>Add a new ingredient to your list!</p>
+                {/* <p>Add a new ingredient to your list!</p> */}
+            </div>
+
+            <div className='input_div'>
 
                 <input
                     type="text"
-                    placeholder="Add an ingredient..."
+                    placeholder="Add a new ingredient..."
+                    className='input'
                     value={newIngredient}
                     onChange={(e) => setNewIngredient(e.target.value)}
                 />
 
 
-                <button onClick={() => addIngredient()}>Add</button>
-
-
-                <div className='fridgeContainer'>
-
-                    {ingredients.map((ingredient) => {
-                        return (
-                            <div className='fridgeList' key={ingredient.ingredientId}>
-                                <div className='ingredientinline' key={ingredient.ingredientId} >
-                                    {ingredient.ingredientName}
-                                    <button
-                                        className="delete-button"
-                                        onClick={() => deleteItem(ingredient.ingredientId)}
-                                    >
-                                        ❌
-                                    </button>
-                                </div>
-                            </div>
-                        );
-                    })}
-
-                </div>
-                <button onClick={() => searchRecipe()}>Search recipes by ingredients</button>
+                <button type='submit' className='addButton' onClick={() => addIngredient()}>+</button>
 
             </div>
+
+
+
+
+
+            <div className='fridgeContainer'>
+
+                {ingredients.map((ingredient) => {
+                    return (
+                        <div className='fridgeList' key={ingredient.ingredientId}>
+                            <div className='ingredientinline' key={ingredient.ingredientId} >
+                                {ingredient.ingredientName}
+                                <button
+                                    className="delete-button"
+                                    onClick={() => deleteItem(ingredient.ingredientId)}
+                                >
+                                    ❌
+                                </button>
+                            </div>
+                        </div>
+                    );
+                })}
+
+                
+
+            </div>
+
+            <button className='searchButton' onClick={() => searchRecipe()}><i className="fa fa-search"></i></button>
+
+
+
+
+
             <div className="favoritesSection">
                 <h1>Search results</h1>
                 <div className='favoritesDashboard'>

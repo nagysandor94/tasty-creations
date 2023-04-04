@@ -1,0 +1,19 @@
+ol {
+    list-style: none;
+    counter-reset: item;
+  }
+  li {
+    counter-increment: item;
+    margin-bottom: 5px;
+  }
+  li:before {
+    margin-right: 10px;
+    content: counter(item);
+    background:  #2196F3;
+    border-radius: 100%;
+    color: white;
+    width: 1.2em;
+    text-align: center;
+    display: inline-block;
+    padding: 0.25em;
+  }

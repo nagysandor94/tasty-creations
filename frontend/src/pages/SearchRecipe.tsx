@@ -52,16 +52,18 @@ const SearchRecipe = () => {
 
 
     return (
+
         <>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <form className="searchRecipeForm">
-                <label className="searchRecipe">Search recipe:
                     <input className="searchInput"
                         type="text"
+                        placeholder='Search recipe...'
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
-                </label>
-                <button onClick={event => handleSubmit(event)}>Search</button>
+
+                <button className='searchButton' onClick={event => handleSubmit(event)}><i className="fa fa-search"></i></button>
             </form>
 
             <div className="favoritesSection">
