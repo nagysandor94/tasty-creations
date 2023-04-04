@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import '../Styling/Home.css';
+import '../Styling/Instructions.css'
 import axios from "axios";
 import {ExtendedIngredient, RecipeModel} from "../model/RecipeModel";
 
