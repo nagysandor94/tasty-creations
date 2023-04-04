@@ -1,9 +1,10 @@
-p{
+.aboutText p{
     font-size: medium;
     font-family: "Apple Chancery";
     padding-left: 8%;
     padding-right: 8%;
     padding-bottom: 8%;
+    padding-top: 2em;
     color:#cccc00;
 
 }

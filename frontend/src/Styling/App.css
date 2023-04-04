@@ -48,6 +48,7 @@
   color:black;
   /*margin-bottom: 2em;*/
   align-items: center;
+  margin-bottom: 2em;
 }
 
 .bannerItem:hover{
@@ -68,4 +69,43 @@
 .appFooter{
 font-family: Avenir;
   color: white;
+}
+
+.dropbtn {
+  padding: 8px;
+  color: whitesmoke;
+  text-decoration: none;
+  border: solid white;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+/* .dropdown {
+
+} */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .link {
+  color: black;
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content .link:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {
+  box-shadow: 0 -2px 0 0 #3DC795 inset;
+  -webkit-transition: box-shadow .2s linear;
+  transition: box-shadow .2s linear;
 }
