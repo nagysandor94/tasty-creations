@@ -20,7 +20,7 @@
 }
 
 .ingredientItem{
-    color: white;
+    color: black;
     display: flex;
     flex-direction: row;
     margin: 3%;

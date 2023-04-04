@@ -2,7 +2,7 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 8%;
-    color: wheat;
+    color: black;
 }
 
 .favoritesDashboard{
@@ -16,7 +16,7 @@
   /*transform-origin:200% center;*/
     padding: 1%;
     position:relative;
-    color: white;
+    color: black;
     max-width: 30%;
     /*animation:rotate 3s linear infinite;*/
 }
@@ -47,7 +47,7 @@
 }
 
 .favoriteRecipeName{
-    color: white;
+    color: black;
 }
 .favCardLink{
     text-decoration: none;

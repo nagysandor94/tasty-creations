@@ -11,7 +11,7 @@ import nextIcon from "../images/NextIcon.png";
 
 const Welcome = () => {
     const baseUrl = "https://tasty-creation.azurewebsites.net/";
-    // const baseUrl = "http://localhost:8080/";
+     // const baseUrl = "http://localhost:8080/";
 
     const [recipe1, setRecipe1] = useState<RecipeModel>();
     const [recipe2, setRecipe2] = useState<RecipeModel>();

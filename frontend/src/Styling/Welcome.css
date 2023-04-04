@@ -1,10 +1,11 @@
 
 .welcomeRecipeSection{
-    color: white;
+    color: black;
 }
 
 .welcomeRecipeHeading{
-    color: white;
+    font-weight: 800;
+    color: darkred;
     padding-top: 4%;
 }
 
@@ -13,7 +14,7 @@
     width: 15rem;
     height:auto;
     padding: 1%;
-    margin-left: 7%;
+    /*margin-left: 1%;*/
     float: left;
 }
 
@@ -21,7 +22,7 @@
     font-size: calc(10px + 0.390625vw);
     font-family: Avenir;
     text-align: justify;
-    color: white;
+    color: black;
 }
 
 .recipeSummary:first-child:first-letter {

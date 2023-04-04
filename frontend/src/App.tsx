@@ -11,7 +11,11 @@ import { Link } from 'react-router-dom';
 import SearchByIngredient from './pages/SearchByIngredient';
 import Welcome from "./pages/Welcome";
 import logoTasty from "./images/logo.png"
-import useDropdownMenu from 'react-accessible-dropdown-menu-hook';
+// import useDropdownMenu from 'react-accessible-dropdown-menu-hook';
+import homeIcon from "./images/home.png"
+import searchIcon from "./images/search.png"
+import aboutIcon from "./images/about.png"
+import favoriteIcon from "./images/favorite.png"
 
 
 
@@ -22,27 +26,32 @@ function App() {
 
 
             <div className="appHeader">
-                <img className="logo" src={logoTasty}></img>
                 <h1 className='appName'>TASTY CREATIONS</h1>
                 <div className='pageBanner'>
-                    <div className='bannerItem'>
-                        <Link className='linkBanner' to="/home">Home</Link>
-                    </div>
-                    <div className='bannerItem'>
-                        <Link className='linkBanner' to="/about">About</Link>
-                    </div>
+                    <Link className='bannerItem' to="/home">
+                        <img className="bannerIcon" src={homeIcon}/>
+                        <div className='linkBanner'>Home</div>
+                    </Link>
+                    <Link className='bannerItem'to="/about">
+                        <img className="bannerIcon" src={aboutIcon}/>
+                        <div className='linkBanner' >About</div>
+                    </Link>
+                    <div className="bannerItem">
+                        <img className="bannerIcon" src={searchIcon}/>
                     <div className="dropdown">
                         <button className="dropbtn">Search</button>
                         <div className="dropdown-content">
-                            <Link className='link' to="/randomrecipe">Get Random Recipes</Link>
+                            <Link className='link' to="/randomrecipe">Get a Random Recipe</Link>
                             <Link className='link' to="/byrecipe">Search Recipes</Link>
                             <Link className='link' to="/byingredients">By Ingredients</Link>
                         </div>
                     </div>
-                    
-                    <div className='bannerItem'>
-                        <Link className='linkBanner' to="/favorites">Favorites</Link>
                     </div>
+
+                    <Link className='bannerItem'to="/favorites">
+                        <img className="bannerIcon" src={favoriteIcon}/>
+                        <div className='linkBanner' >Favorites</div>
+                    </Link>
                     {/* <div className='bannerItem'>
                         <Link className='linkBanner' to="/search">Search</Link>
                     </div> */}
@@ -63,6 +72,7 @@ function App() {
                 </Routes>
             </div>
             <div className="appFooter">
+                <img className="logo" src={logoTasty}></img>
                 <text>App by Poppies ©</text>
             </div>
         </div>

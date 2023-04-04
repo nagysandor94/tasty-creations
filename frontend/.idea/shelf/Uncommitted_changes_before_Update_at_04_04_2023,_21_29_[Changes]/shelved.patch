@@ -1,0 +1,400 @@
+Index: src/Styling/Welcome.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n.welcomeRecipeSection{\n    color: white;\n}\n\n.welcomeRecipeHeading{\n    color: white;\n    padding-top: 4%;\n}\n\n\n.welcomeRecipeImage{\n    width: 15rem;\n    height:auto;\n    padding: 1%;\n    margin-left: 7%;\n    float: left;\n}\n\n.recipeSummary{\n    font-size: calc(10px + 0.390625vw);\n    font-family: Avenir;\n    text-align: justify;\n    color: white;\n}\n\n.recipeSummary:first-child:first-letter {\n    font-size: calc(60px + 0.75vw);\n    line-height: 40px;\n    color: indianred;\n    float: left;\n    padding-top: 10px;\n    padding-right: 10px;\n    padding-left: 5px;\n    font-family: Sansita One;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Styling/Welcome.css b/src/Styling/Welcome.css
+--- a/src/Styling/Welcome.css	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/src/Styling/Welcome.css	(date 1680634931572)
+@@ -1,10 +1,10 @@
+ 
+ .welcomeRecipeSection{
+-    color: white;
++    color: black;
+ }
+ 
+ .welcomeRecipeHeading{
+-    color: white;
++    color: black;
+     padding-top: 4%;
+ }
+ 
+@@ -21,7 +21,7 @@
+     font-size: calc(10px + 0.390625vw);
+     font-family: Avenir;
+     text-align: justify;
+-    color: white;
++    color: black;
+ }
+ 
+ .recipeSummary:first-child:first-letter {
+Index: src/index.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>body {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\n    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',\n    sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  background: black url(\"./images/BlackTextureBackground.jpg\") repeat fixed center;\n}\n\n\ncode {\n  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',\n    monospace;\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/index.css b/src/index.css
+--- a/src/index.css	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/src/index.css	(date 1680635715280)
+@@ -5,7 +5,7 @@
+     sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+-  background: black url("./images/BlackTextureBackground.jpg") repeat fixed center;
++  /*background: black url("./images/BlackTextureBackground.jpg") repeat fixed center;*/
+ }
+ 
+ 
+Index: src/Styling/App.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.App {\n   padding: 3%;\n  text-align: center;\n  background-size: cover;\n  /*background-size: 100%;*/\n  background: black url(\"../images/BlackTextureBackground.jpg\") repeat fixed center;\n  /*background: black url(\"../images/recipesbg.jpg\") no-repeat scroll top;*/\n  height: 100%;\n}\n\n.appContent{\n  padding-bottom: 80vh;\n  overflow:hidden;\n}\n\n@media only screen and (min-width: 800px) {\n  .appContent{\n    /*background-color: whitesmoke;*/\n    /*background-image: url(\"../images/AppBackground.jpg\");*/\n    padding-bottom: 20vh;\n  }\n}\n\n.appName{\n  font-family: Avenir;\n  font-size: 2rem;\n  width: 100%;\n  /*padding: 30px 0;*/\n  text-align: center;\n  /*background: #33cccc;*/\n  background: transparent;\n  color:wheat;\n}\n\n.logo{\n  width: 50px;\n  height: 50px;\n}\n.pageBanner {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  font-size: 1rem;\n  overflow: hidden;\n  /*background:#004d4d;*/\n  /*background: #33cccc;*/\n  padding: 2px 0;\n  color:black;\n  /*margin-bottom: 2em;*/\n  align-items: center;\n}\n\n.bannerItem:hover{\n  color: #3DC795;\n  box-shadow: 0 -2px 0 0 #3DC795 inset;\n  -webkit-transition: box-shadow .2s linear;\n  transition: box-shadow .2s linear;\n}\n\n\n.linkBanner {\n  padding: 8px;\n  color: whitesmoke;\n  text-decoration: none;\n  border: solid white;\n}\n\n.appFooter{\nfont-family: Avenir;\n  color: white;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Styling/App.css b/src/Styling/App.css
+--- a/src/Styling/App.css	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/src/Styling/App.css	(date 1680636092839)
+@@ -1,15 +1,20 @@
+ .App {
+    padding: 3%;
+-  text-align: center;
+-  background-size: cover;
++   text-align: center;
++  /*background-color: white;*/
++  /*background-size: cover;*/
+   /*background-size: 100%;*/
+-  background: black url("../images/BlackTextureBackground.jpg") repeat fixed center;
+-  /*background: black url("../images/recipesbg.jpg") no-repeat scroll top;*/
+-  height: 100%;
++  /*background: black url("../images/BlackTextureBackground.jpg") repeat fixed center;*/
++  /*background: black url("../images/Background Phone.jpeg");*/
++  background: white url("../images/vegbackground.jpg") no-repeat fixed top;
++  background-size: cover;
++  height:200px;
++  /*padding-top:30px;*/
+ }
+ 
+ .appContent{
+-  padding-bottom: 80vh;
++  padding-top: 5vh;
++  padding-bottom: 20vh;
+   overflow:hidden;
+ }
+ 
+@@ -22,18 +27,19 @@
+ }
+ 
+ .appName{
+-  font-family: Avenir;
++  font-family:"Apple Chancery";
+   font-size: 2rem;
+   width: 100%;
++  padding-bottom: 2vh;
+   /*padding: 30px 0;*/
+   text-align: center;
+   /*background: #33cccc;*/
+   background: transparent;
+-  color:wheat;
++  color:crimson;
+ }
+ 
+ .logo{
+-  width: 50px;
++  width:50px;
+   height: 50px;
+ }
+ .pageBanner {
+@@ -44,7 +50,7 @@
+   overflow: hidden;
+   /*background:#004d4d;*/
+   /*background: #33cccc;*/
+-  padding: 2px 0;
++  padding: 2px;
+   color:black;
+   /*margin-bottom: 2em;*/
+   align-items: center;
+@@ -60,12 +66,12 @@
+ 
+ .linkBanner {
+   padding: 8px;
+-  color: whitesmoke;
++  color: black;
+   text-decoration: none;
+-  border: solid white;
++  border: 3px solid black;
+ }
+ 
+ .appFooter{
+ font-family: Avenir;
+-  color: white;
++  color: black;
+ }
+Index: src/Styling/RandomRecipe.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n\n/*.ingredientsSection{*/\n/*    backdrop-filter: blur(4px);*/\n/*}*/\n\n.ingredientsHeader{\n    color: white;\n    font-size: calc(15px + 0.390625vw);\n    font-family: Avenir;\n}\n.ingredientsList{\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-evenly;\n    /*background-color: rgba(255,255,255,0.2);*/\n\n}\n\n.recipeServings{\n    color: white;\n}\n\n\n\n.instructionsList{\n    padding-left: 5%;\n    padding-right: 8%;\n    text-align: justify;\n    color: white;\n    /*background-color: azure;*/\n    padding-top: 1%;\n    font-size: calc(15px + 0.390625vw);\n}\n.instructionsHeader{\n    color: white;\n    text-align: center;\n    /*font-size: calc(15px + 0.390625vw);*/\n    font-weight: bold;\n    font-family: monospace;\n    font-size: 1.2rem;\n    text-transform: uppercase;\n    text-align: center;\n}\n\n\n/*.recipeImageFooter{*/\n/*    display: block;*/\n/*    margin-left: auto;*/\n/*    margin-right: auto;*/\n/*   margin-bottom: 3%;*/\n/*    width: 40%;*/\n/*    height: auto;*/\n/*    border-radius: 4%;*/\n/*}*/\n\n.ingredientImage{\n    width: 100%;\n}\n\n.randomRecipeHeader{\n    color: white;\n    font-size: 3vw;\n    backdrop-filter: blur(5px);\n}\n\n.recipeHeading {\n    position:relative;\n    font-size:xx-large;\n    /*background-color: rgba(255,255,255,0.2);*/\n}\n\n.recipeImage{\n    max-width: 50%;\n    max-height: 20%;\n    object-fit: cover;\n    padding: 1%;\n}\n\n.iconFavorite{\n    position: absolute;\n    top: 5%;\n    padding:2px;\n    right: 10%;\n    max-height: calc(20px + 0.390625vw);\n    width: auto;\n    border-radius: 35%;\n    background-color: rgba(255,255,255, 0.4);\n    /*background-color: #3DC795;*/\n}\n.nextIcon{\n    position: absolute;\n    bottom: 50%;\n    right: 10%;\n    max-height: calc(20px + 0.390625vw);\n    width: auto;\n    border-radius: 50%;\n    background-color: rgba(255,255,255, 0.4);\n}\n\n.iconFavorite:hover{\n    background-color: white; /* Black w/opacity/see-through */\n}\n\n.nextIcon:hover{\n    background-color: white; /* Fallback color */\n}\n\n.randomRecipe{\n    display: flex;\n    flex-direction: column;\n    justify-content: space-evenly;\n}\n\n.instructions{\n    margin-bottom: 2%;\n}\n\n.recipeSection{\n    display: flex;\n    flex-direction: column;\n}\n\n\n/*.details {*/\n/*    user-select: none;*/\n/*}*/\n\n/*.expandIcon {*/\n/*    width: 24px;*/\n/*    height: 24px;*/\n/*    transition: all 0.3s;*/\n/*    margin-left: auto;*/\n/*}*/\n\n/*.summary {*/\n/*    display: flex;*/\n/*    cursor: pointer;*/\n/*}*/\n\n/*.ingredientsCollapsible::-webkit-details-marker {*/\n/*    display: none;*/\n/*}*/\n/*.ingredientsCollapsible{*/\n/*    padding-left: 5%;*/\n/*    padding-right: 5%;*/\n/*    display: flex;*/\n/*    flex-direction: row;*/\n/*    align-items: center;*/\n/*    justify-content: space-between;*/\n/*    background-color: rgba(255,255,255,0.2);*/\n/*}*/\n\n\n.ingredientListToggleCheck { display: none; }\n.wrap-collapsible { padding: 1rem }\n.lbl-toggle {\n    display: block;\n    font-weight: bold;\n    font-family: monospace;\n    font-size: 1.2rem;\n    text-transform: uppercase;\n    text-align: center;\n    padding: 1rem;\n    color: #DDD;\n    /*background: #0069ff;*/\n    cursor: pointer;\n    border-radius: 7px;\n    transition: all 0.25s ease-out;\n}\n.lbl-toggle:hover { color: #FFF; }\n.lbl-toggle::before {\n    content: ' ';\n    display: inline-block;\n    border-top: 5px solid transparent;\n    border-bottom: 5px solid transparent;\n    border-left: 5px solid currentColor;\n    vertical-align: middle;\n    margin-right: .7rem;\n    transform: translateY(-2px);\n    transition: transform .2s ease-out;\n}\n.ingredientListToggleCheck:checked+.lbl-toggle::before { transform: rotate(90deg) translateX(-3px); }\n/*.collapsible-content { max-height: 0px; overflow: hidden; transition: max-height .25s ease-in-out;padding-bottom: 1rem; }*/\n.collapsible-content{display:none}\n.ingredientListToggleCheck:checked + .lbl-toggle + .collapsible-content {display: inherit;transition: .25s ease-in-out }\n.ingredientListToggleCheck:checked+.lbl-toggle { border-bottom-right-radius: 0; border-bottom-left-radius: 0; }\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Styling/RandomRecipe.css b/src/Styling/RandomRecipe.css
+--- a/src/Styling/RandomRecipe.css	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/src/Styling/RandomRecipe.css	(date 1680634931603)
+@@ -5,7 +5,7 @@
+ /*}*/
+ 
+ .ingredientsHeader{
+-    color: white;
++    color: black;
+     font-size: calc(15px + 0.390625vw);
+     font-family: Avenir;
+ }
+@@ -18,7 +18,7 @@
+ }
+ 
+ .recipeServings{
+-    color: white;
++    color: black;
+ }
+ 
+ 
+Index: src/Styling/ingredientItem.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.ingredientImage{\n    max-height: 40px;\n    max-width: 40px;\n    object-fit: contain;\n    padding-right: 2%;\n}\n\n.ingredientMeasure{\n    padding-right: 2%;\n    font-weight: 700;\n\n}\n\n.ingredientName{\n\n}\n.ingredientAmount{\n    padding-right: 2%;\n    font-weight: 700;\n}\n\n.ingredientItem{\n    color: white;\n    display: flex;\n    flex-direction: row;\n    margin: 3%;\n    padding: 1%;\n    /*background-color: azure;*/\n    border-radius: 8%;\n    font-size: calc(12px + 0.390625vw);\n    width: 40%;\n    align-items: center;\n}\n/*.ingredientItem*/\n/*{ display: flex;*/\n/*    -webkit-box-align: center;*/\n/*    align-items: center;*/\n/*    break-inside: avoid;*/\n/*}*/\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Styling/ingredientItem.css b/src/Styling/ingredientItem.css
+--- a/src/Styling/ingredientItem.css	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/src/Styling/ingredientItem.css	(date 1680634931596)
+@@ -20,7 +20,7 @@
+ }
+ 
+ .ingredientItem{
+-    color: white;
++    color: black;
+     display: flex;
+     flex-direction: row;
+     margin: 3%;
+Index: src/pages/Welcome.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React, {useEffect, useState} from 'react';\nimport '../Styling/Welcome.css';\nimport axios from \"axios\";\nimport {FavoritesListResponse, RecipeModel} from \"../model/RecipeModel\";\nimport { Link } from 'react-router-dom';\nimport addToFav from \"../images/heart.png\";\nimport addedToFav from \"../images/lover.png\";\nimport nextIcon from \"../images/NextIcon.png\";\n\n\n\nconst Welcome = () => {\n    const baseUrl = \"https://tasty-creation.azurewebsites.net/\";\n    // const baseUrl = \"http://localhost:8080/\";\n\n    const [recipe1, setRecipe1] = useState<RecipeModel>();\n    const [recipe2, setRecipe2] = useState<RecipeModel>();\n    const [isInFav, setIsInFav] = useState<boolean>(false);\n    const [favoritesList,setFavoritesList]=useState<FavoritesListResponse>();\n    function getRandomRecipe() {\n        axios.get<RecipeModel>(baseUrl + \"api/random\")\n            .then(response => {\n                setRecipe1(response.data);\n                setIsInFav(response.data.isInFav);\n            });\n        axios.get<RecipeModel>(baseUrl + \"api/random\")\n            .then(response => {\n                setRecipe2(response.data);\n                setIsInFav(response.data.isInFav);\n            });\n    }\n\n    function getFavorites(){\n        axios.get<FavoritesListResponse>(baseUrl + \"api/favorites\")\n            .then(response=>{setFavoritesList(response.data)})\n    }\n\n\n    useEffect(() => {\n        getRandomRecipe();\n    }, []);\n\n    useEffect(()=>{\n        getFavorites();\n    },[])\n\n\n    return(\n        <div>\n            <div className=\"welcomeRecipeHeading\">Recipe in highlight! {recipe1?.title}</div>\n            <div className=\"welcomeRecipeSection\">\n                <Link className=\"favCardLink\" to={`/recipe/${recipe1?.id}`}>\n                <div>\n                <img className=\"welcomeRecipeImage\" src={recipe1?.image}></img>\n                </div>\n                <div>\n                <p className=\"recipeSummary\">\n                    {recipe1?.summary}\n                </p>\n                </div>\n                </Link>\n            </div>\n            <div className=\"welcomeRecipeHeading\">Recipe in highlight! {recipe2?.title}</div>\n            <div className=\"welcomeRecipeSection\">\n                <Link className=\"favCardLink\" to={`/recipe/${recipe2?.id}`}>\n                    <div>\n                        <img className=\"welcomeRecipeImage\" src={recipe2?.image}></img>\n                    </div>\n                    <div>\n                        <p className=\"recipeSummary\">\n                            {recipe2?.summary}\n                        </p>\n                    </div>\n                </Link>\n            </div>\n        </div>\n    )\n}\n\nexport default Welcome;\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/pages/Welcome.tsx b/src/pages/Welcome.tsx
+--- a/src/pages/Welcome.tsx	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/src/pages/Welcome.tsx	(date 1680634666966)
+@@ -11,7 +11,7 @@
+ 
+ const Welcome = () => {
+     const baseUrl = "https://tasty-creation.azurewebsites.net/";
+-    // const baseUrl = "http://localhost:8080/";
++     // const baseUrl = "http://localhost:8080/";
+ 
+     const [recipe1, setRecipe1] = useState<RecipeModel>();
+     const [recipe2, setRecipe2] = useState<RecipeModel>();
+Index: src/Styling/Home.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n/*@media only screen and (min-width: 1000px) {*/\n/*    .homePage{*/\n/*        background-color: whitesmoke;*/\n/*        background-image: url(\"../images/AppBackground.jpg\");*/\n/*        background-size: cover;*/\n/*    }*/\n\n/*}*/\n\n\n/*.homeHeader{*/\n/*    color: white;*/\n/*    font-size: 3vw;*/\n/*    backdrop-filter: blur(5pxclea);*/\n/*}*/\n.homePageLink{\n    text-decoration: none;\n}\n\n.card{\n    padding: 1%;\n    font-size: 1rem;\n    color:white;\n    font-weight: 400;\n}\n\n/*.cardLink{*/\n/*    padding: 8px;*/\n/*    color: black;*/\n/*}*/\n\n.homePageCards{\n    display: flex;\n    flex-direction: column;\n    justify-items: center;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Styling/Home.css b/src/Styling/Home.css
+--- a/src/Styling/Home.css	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/src/Styling/Home.css	(date 1680634931563)
+@@ -21,7 +21,7 @@
+ .card{
+     padding: 1%;
+     font-size: 1rem;
+-    color:white;
++    color:black;
+     font-weight: 400;
+ }
+ 
+Index: src/Styling/About.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>p{\n    font-size: medium;\n    font-family: \"Apple Chancery\";\n    padding-left: 8%;\n    padding-right: 8%;\n    padding-bottom: 8%;\n    color:#cccc00;\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Styling/About.css b/src/Styling/About.css
+--- a/src/Styling/About.css	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/src/Styling/About.css	(date 1680634931590)
+@@ -4,6 +4,6 @@
+     padding-left: 8%;
+     padding-right: 8%;
+     padding-bottom: 8%;
+-    color:#cccc00;
++    color:black;
+ 
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"3ef4463d-557c-426a-a111-6128f57c6c6d\" name=\"Changes\" comment=\"&quot;Modified home&quot;\">\n      <change beforePath=\"$PROJECT_DIR$/../backend/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../backend/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"TypeScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$/..\" value=\"Development-IA\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2NVreoHlMNNZR4nW18YOnfiCzA7\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"last_opened_file_path\": \"/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/src/images\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"settings.editor.selected.configurable\": \"web.server\",\n    \"ts.external.directory.path\": \"/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/node_modules/typescript/lib\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/images\" />\n      <recent name=\"$PROJECT_DIR$/src/pages\" />\n      <recent name=\"$PROJECT_DIR$/src/Styling\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/images\" />\n      <recent name=\"$PROJECT_DIR$/src/Styling\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"3ef4463d-557c-426a-a111-6128f57c6c6d\" name=\"Changes\" comment=\"\" />\n      <created>1679760188682</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1679760188682</updated>\n      <workItem from=\"1679760190006\" duration=\"4901000\" />\n      <workItem from=\"1679774170481\" duration=\"40333000\" />\n      <workItem from=\"1679937776066\" duration=\"2702000\" />\n      <workItem from=\"1679946965511\" duration=\"6949000\" />\n      <workItem from=\"1680001525085\" duration=\"1572000\" />\n      <workItem from=\"1680003240129\" duration=\"20103000\" />\n      <workItem from=\"1680094838810\" duration=\"15885000\" />\n      <workItem from=\"1680161710960\" duration=\"1227000\" />\n      <workItem from=\"1680179981944\" duration=\"4218000\" />\n      <workItem from=\"1680184311343\" duration=\"1589000\" />\n      <workItem from=\"1680201222648\" duration=\"93000\" />\n      <workItem from=\"1680201321737\" duration=\"10492000\" />\n      <workItem from=\"1680385011604\" duration=\"2000\" />\n      <workItem from=\"1680385043621\" duration=\"1463000\" />\n      <workItem from=\"1680422189494\" duration=\"24500000\" />\n      <workItem from=\"1680508802683\" duration=\"15178000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"&quot;Random front end&quot;\">\n      <created>1679839288774</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1679839288774</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"&quot;Edits&quot;\">\n      <created>1680183141036</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1680183141036</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"&quot;Image-size&quot;\">\n      <created>1680183782920</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1680183782920</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"&quot;Image-size&quot;\">\n      <created>1680184381841</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1680184381841</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"&quot;Fav-card&quot;\">\n      <created>1680184705916</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1680184705916</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"&quot;Modified home&quot;\">\n      <created>1680595294147</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1680595294147</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"&quot;Modified home&quot;\">\n      <created>1680596640449</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1680596640449</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"8\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\n    <MESSAGE value=\"&quot;Random front end&quot;\" />\n    <MESSAGE value=\"&quot;Edits&quot;\" />\n    <MESSAGE value=\"&quot;Image-size&quot;\" />\n    <MESSAGE value=\"&quot;Fav-card&quot;\" />\n    <MESSAGE value=\"&quot;Modified home&quot;\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"&quot;Modified home&quot;\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/.idea/workspace.xml	(date 1680636451956)
+@@ -5,7 +5,23 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="3ef4463d-557c-426a-a111-6128f57c6c6d" name="Changes" comment="&quot;Modified home&quot;">
++      <change afterPath="$PROJECT_DIR$/src/images/Background Phone.jpeg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/images/berry_background.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/images/donutbavkground.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/images/egg_background.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/images/soupbackground.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/images/vegbackground.jpg" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Styling/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/About.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/App.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Styling/Favorites.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Favorites.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Styling/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Home.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Styling/Welcome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Welcome.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Styling/ingredientItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/ingredientItem.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/pages/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Welcome.tsx" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -38,23 +54,23 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/src/images",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "settings.editor.selected.configurable": "web.server",
+-    "ts.external.directory.path": "/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/node_modules/typescript/lib",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/src/images&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;web.server&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;/Users/salt-dev/Desktop/MainProject/tasty-creations/frontend/node_modules/typescript/lib&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/images" />
+@@ -89,7 +105,9 @@
+       <workItem from="1680385011604" duration="2000" />
+       <workItem from="1680385043621" duration="1463000" />
+       <workItem from="1680422189494" duration="24500000" />
+-      <workItem from="1680508802683" duration="15178000" />
++      <workItem from="1680508802683" duration="21969000" />
++      <workItem from="1680634404184" duration="1077000" />
++      <workItem from="1680635572434" duration="807000" />
+     </task>
+     <task id="LOCAL-00001" summary="&quot;Random front end&quot;">
+       <created>1679839288774</created>
+Index: src/Styling/Favorites.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.favoritesSection{\n    padding-left: 5%;\n    padding-right: 5%;\n    padding-bottom: 8%;\n    color: wheat;\n}\n\n.favoritesDashboard{\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n}\n\n\n.favoritesCard {\n  /*transform-origin:200% center;*/\n    padding: 1%;\n    position:relative;\n    color: white;\n    max-width: 30%;\n    /*animation:rotate 3s linear infinite;*/\n}\n\n.favoritesCard:hover{\n    background-color: rgba(255,255,255,0.4); /* Fallback color */\n    /*background-color: rgba(51,204,204,0.4); !* Fallback color *!*/\n    /*background-color: rgba(,0,0, 0.4); !* Black w/opacity/see-through *!*/\n}\n\n.favoriteRecipeImage{\n    width: 40%;\n    height: auto;\n    border-radius: 4%;\n}\n\n.favoritesCard .iconFavoriteCard{\n    position: absolute;\n    top: 2%;\n    right: 5%;\n    max-height: 1rem;\n    width: auto;\n    border-radius: 35%;\n}\n\n.iconFavoriteCard:hover{\n    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */\n}\n\n.favoriteRecipeName{\n    color: white;\n}\n.favCardLink{\n    text-decoration: none;\n}\n\n.favoriteRecipeName:hover{\n    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */\n}\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Styling/Favorites.css b/src/Styling/Favorites.css
+--- a/src/Styling/Favorites.css	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/src/Styling/Favorites.css	(date 1680634931586)
+@@ -2,7 +2,7 @@
+     padding-left: 5%;
+     padding-right: 5%;
+     padding-bottom: 8%;
+-    color: wheat;
++    color: black;
+ }
+ 
+ .favoritesDashboard{
+@@ -16,7 +16,7 @@
+   /*transform-origin:200% center;*/
+     padding: 1%;
+     position:relative;
+-    color: white;
++    color: black;
+     max-width: 30%;
+     /*animation:rotate 3s linear infinite;*/
+ }
+@@ -47,7 +47,7 @@
+ }
+ 
+ .favoriteRecipeName{
+-    color: white;
++    color: black;
+ }
+ .favCardLink{
+     text-decoration: none;
+Index: ../backend/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"d561fc61-c8b9-4bab-8336-1c3042fc32fc\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Record\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Merge.Settings\">\n    <option name=\"BRANCH\" value=\"origin/main\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$/..\" value=\"main\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\n  </component>\n  <component name=\"HighlightingSettingsPerFile\">\n    <setting file=\"file://$PROJECT_DIR$/src/main/java/se/backend/BackendApplication.java\" root0=\"FORCE_HIGHLIGHTING\" />\n    <setting file=\"file://$PROJECT_DIR$/src/main/java/se/backend/TsService.java\" root0=\"FORCE_HIGHLIGHTING\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2NdV6YK0fTJBz4kvbJvoFoR8AQd\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,\n    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,\n    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,\n    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/salt-dev/Desktop/MainProject/tasty-creations/backend/pom.xml&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,\n    &quot;spring.configuration.checksum&quot;: &quot;b43fdd98b1fd705ae4c3a10cf25aad8a&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"ReactorSettings\">\n    <option name=\"notificationShown\" value=\"true\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/test\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Spring Boot.BackendApplication\">\n    <configuration name=\"BackendApplicationTests\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"backend\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"se.backend.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"se.backend\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"se.backend.BackendApplicationTests\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"backend-0.0.1-SNAPSHOT.jar\" type=\"JarApplication\" temporary=\"true\">\n      <option name=\"JAR_PATH\" value=\"$PROJECT_DIR$/target/backend-0.0.1-SNAPSHOT.jar\" />\n      <option name=\"ALTERNATIVE_JRE_PATH\" />\n      <envs>\n        <env name=\"API_KEY_I\" value=\"16c3ec98bcmshd183df0ce8c7e74p1efae2jsn6b1abdcdf768\" />\n        <env name=\"API_KEY_S\" value=\"9d5d4fbeee6a4046a0a0bda36a37fcec\" />\n        <env name=\"DB_PW\" value=\"tsY3OLBTDpoNnRDsNVFT2UVh9hXXfiO6\" />\n        <env name=\"DB_URL\" value=\"jdbc:postgresql://rogue.db.elephantsql.com:5432/rdijxiwm\" />\n        <env name=\"DB_USER\" value=\"rdijxiwm\" />\n      </envs>\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"BackendApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\n      <envs>\n        <env name=\"API_KEY_I\" value=\"16c3ec98bcmshd183df0ce8c7e74p1efae2jsn6b1abdcdf768\" />\n        <env name=\"API_KEY_S\" value=\"9d5d4fbeee6a4046a0a0bda36a37fcec\" />\n        <env name=\"DB_PW\" value=\"jTBLpBSh8vNrnLYnE7gkCIiLBcHE42QK\" />\n        <env name=\"DB_URL\" value=\"jdbc:postgresql://mouse.db.elephantsql.com:5432/ebypfghn\" />\n        <env name=\"DB_USER\" value=\"ebypfghn\" />\n      </envs>\n      <module name=\"backend\" />\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"se.backend.BackendApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"se.backend.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <list>\n      <item itemvalue=\"JAR Application.backend-0.0.1-SNAPSHOT.jar\" />\n      <item itemvalue=\"JUnit.BackendApplicationTests\" />\n      <item itemvalue=\"Spring Boot.BackendApplication\" />\n    </list>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JAR Application.backend-0.0.1-SNAPSHOT.jar\" />\n        <item itemvalue=\"JUnit.BackendApplicationTests\" />\n        <item itemvalue=\"JAR Application.backend-0.0.1-SNAPSHOT.jar\" />\n        <item itemvalue=\"JUnit.BackendApplicationTests\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"d561fc61-c8b9-4bab-8336-1c3042fc32fc\" name=\"Changes\" comment=\"\" />\n      <created>1679993770755</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1679993770755</updated>\n      <workItem from=\"1679993772454\" duration=\"4120000\" />\n      <workItem from=\"1680003146837\" duration=\"10411000\" />\n      <workItem from=\"1680072156241\" duration=\"414000\" />\n      <workItem from=\"1679993772454\" duration=\"15579000\" />\n      <workItem from=\"1680023722170\" duration=\"1061000\" />\n      <workItem from=\"1680075439594\" duration=\"322000\" />\n      <workItem from=\"1680079040510\" duration=\"1543000\" />\n      <workItem from=\"1680160552523\" duration=\"4295000\" />\n      <workItem from=\"1680179930130\" duration=\"668000\" />\n      <workItem from=\"1680160552523\" duration=\"5364000\" />\n      <workItem from=\"1680185841338\" duration=\"490000\" />\n      <workItem from=\"1680188417995\" duration=\"4855000\" />\n      <workItem from=\"1680438855185\" duration=\"3526000\" />\n      <workItem from=\"1680511423062\" duration=\"3928000\" />\n      <workItem from=\"1680593675632\" duration=\"2876000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"XDebuggerManager\">\n    <pin-to-top-manager>\n      <pinned-members>\n        <PinnedItemInfo parentTag=\"jdk.internal.net.http.ImmutableHttpRequest\" memberName=\"version\" />\n        <PinnedItemInfo parentTag=\"jdk.internal.net.http.HttpResponseImpl\" memberName=\"uri\" />\n      </pinned-members>\n    </pin-to-top-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../backend/.idea/workspace.xml b/../backend/.idea/workspace.xml
+--- a/../backend/.idea/workspace.xml	(revision 54c287769d36d5ab6b653daa147a2eb0019f52e3)
++++ b/../backend/.idea/workspace.xml	(date 1680611740656)
+@@ -4,7 +4,18 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="" />
++    <list default="true" id="d561fc61-c8b9-4bab-8336-1c3042fc32fc" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/../frontend/src/images/Background Phone.jpeg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../frontend/src/images/berry_background.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../frontend/src/images/donutbavkground.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../frontend/src/images/egg_background.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../frontend/src/images/soupbackground.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../frontend/src/images/vegbackground.jpg" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../frontend/src/Styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Styling/App.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Welcome.tsx" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -152,7 +163,7 @@
+       <workItem from="1680188417995" duration="4855000" />
+       <workItem from="1680438855185" duration="3526000" />
+       <workItem from="1680511423062" duration="3928000" />
+-      <workItem from="1680593675632" duration="2876000" />
++      <workItem from="1680593675632" duration="5437000" />
+     </task>
+     <servers />
+   </component>

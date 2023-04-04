@@ -5,7 +5,7 @@
 /*}*/
 
 .ingredientsHeader{
-    color: white;
+    color: black;
     font-size: calc(15px + 0.390625vw);
     font-family: Avenir;
 }
@@ -18,7 +18,7 @@
 }
 
 .recipeServings{
-    color: white;
+    color: black;
 }
 
 
@@ -27,13 +27,13 @@
     padding-left: 5%;
     padding-right: 8%;
     text-align: justify;
-    color: white;
+    color: black;
     /*background-color: azure;*/
     padding-top: 1%;
     font-size: calc(15px + 0.390625vw);
 }
 .instructionsHeader{
-    color: white;
+    color: black;
     text-align: center;
     /*font-size: calc(15px + 0.390625vw);*/
     font-weight: bold;
@@ -59,7 +59,7 @@
 }
 
 .randomRecipeHeader{
-    color: white;
+    color: black;
     font-size: 3vw;
     backdrop-filter: blur(5px);
 }
@@ -99,11 +99,11 @@
 }
 
 .iconFavorite:hover{
-    background-color: white; /* Black w/opacity/see-through */
+    background-color: lightcoral; /* Black w/opacity/see-through */
 }
 
 .nextIcon:hover{
-    background-color: white; /* Fallback color */
+    background-color: lightcoral; /* Fallback color */
 }
 
 .randomRecipe{
@@ -162,13 +162,13 @@
     text-transform: uppercase;
     text-align: center;
     padding: 1rem;
-    color: #DDD;
+    color: gray;
     /*background: #0069ff;*/
     cursor: pointer;
     border-radius: 7px;
     transition: all 0.25s ease-out;
 }
-.lbl-toggle:hover { color: #FFF; }
+.lbl-toggle:hover { color: black; }
 .lbl-toggle::before {
     content: ' ';
     display: inline-block;

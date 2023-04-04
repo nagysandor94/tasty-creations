@@ -1,39 +1,69 @@
 .App {
    padding: 3%;
-  text-align: center;
-  background-size: cover;
+   text-align: center;
+  /*background-color: white;*/
+  /*background-size: cover;*/
   /*background-size: 100%;*/
-  background: black url("../images/BlackTextureBackground.jpg") repeat fixed center;
-  /*background: black url("../images/recipesbg.jpg") no-repeat scroll top;*/
-  height: 100%;
+  /*background: black url("../images/BlackTextureBackground.jpg") repeat fixed center;*/
+  /*background: black url("../images/Background Phone.jpeg");*/
+  background: white url("../images/vegbackground.jpg") no-repeat scroll top;
+  background-size: cover;
+  height:190px;
+  /*padding-top:30px;*/
 }
 
 .appContent{
-  padding-bottom: 80vh;
+
+  padding-bottom: 20vh;
   overflow:hidden;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (max-width: 1070px) {
+  .bannerIcon{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1070px) {
+  .App{
+    background: white url("../images/vegbackground.jpg") no-repeat scroll top;
+    background-size: cover;
+    height:400px;
+  }
   .appContent{
     /*background-color: whitesmoke;*/
     /*background-image: url("../images/AppBackground.jpg");*/
+    padding-top: 5vh;
     padding-bottom: 20vh;
+  }
+  .bannerItem{
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
   }
 }
 
 .appName{
-  font-family: Avenir;
+  font-family:"Apple Chancery";
   font-size: 2rem;
   width: 100%;
+  padding-bottom: 2vh;
   /*padding: 30px 0;*/
   text-align: center;
   /*background: #33cccc;*/
-  background: transparent;
-  color:wheat;
+  color:crimson;
+  background-color: rgba(255,255,255,0.4);
+  backdrop-filter: blur(2px);
 }
 
 .logo{
-  width: 50px;
+  width:50px;
   height: 50px;
 }
 .pageBanner {
@@ -44,7 +74,7 @@
   overflow: hidden;
   /*background:#004d4d;*/
   /*background: #33cccc;*/
-  padding: 2px 0;
+  padding: 2px;
   color:black;
   /*margin-bottom: 2em;*/
   align-items: center;
@@ -59,23 +89,30 @@
 }
 
 
+
 .linkBanner {
   padding: 8px;
-  color: whitesmoke;
+  color: black;
   text-decoration: none;
-  border: solid white;
+  /*border: 3px solid black;*/
 }
 
 .appFooter{
 font-family: Avenir;
-  color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1%;
 }
 
 .dropbtn {
   padding: 8px;
-  color: whitesmoke;
+  color: black;
   text-decoration: none;
-  border: solid white;
+  border: none;
+  /*border: 3px solid black;*/
   background-color: transparent;
   font-size: 16px;
 }
@@ -108,4 +145,13 @@ font-family: Avenir;
   box-shadow: 0 -2px 0 0 #3DC795 inset;
   -webkit-transition: box-shadow .2s linear;
   transition: box-shadow .2s linear;
+}
+
+.bannerItem{
+  text-decoration: none;
+}
+
+.bannerIcon{
+  width: 40px;
+  height: 40px;
 }
