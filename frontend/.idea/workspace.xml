@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ef4463d-557c-426a-a111-6128f57c6c6d" name="Changes" comment="&quot;Fav-card&quot;">
-      <change afterPath="$PROJECT_DIR$/src/images/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/Welcome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Welcome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RecipeModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecipeModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RandomRecipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Recipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Recipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Welcome.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +91,7 @@
       <workItem from="1680385011604" duration="2000" />
       <workItem from="1680385043621" duration="1463000" />
       <workItem from="1680422189494" duration="24500000" />
-      <workItem from="1680508802683" duration="11303000" />
+      <workItem from="1680508802683" duration="13459000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Random front end&quot;">
       <created>1679839288774</created>
