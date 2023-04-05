@@ -8,7 +8,7 @@
   /*background: black url("../images/Background Phone.jpeg");*/
   background: white url("../images/vegbackground.jpg") no-repeat scroll top;
   background-size: cover;
-  height:190px;
+  height:170px;
   /*padding-top:30px;*/
 }
 
@@ -18,17 +18,17 @@
   overflow:hidden;
 }
 
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 800px) {
   .bannerIcon{
     display: none;
   }
 }
 
-@media only screen and (min-width: 1070px) {
+@media only screen and (min-width: 800px) {
   .App{
     background: white url("../images/vegbackground.jpg") no-repeat scroll top;
     background-size: cover;
-    height:400px;
+    height:260px;
   }
   .appContent{
     /*background-color: whitesmoke;*/
@@ -42,8 +42,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     background-color: rgba(255,255,255,0.4);
   }

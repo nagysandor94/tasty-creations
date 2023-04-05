@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ef4463d-557c-426a-a111-6128f57c6c6d" name="Changes" comment="&quot;Modified home&quot;">
-      <change afterPath="$PROJECT_DIR$/src/images/Background Phone.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/about.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/berry_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/donutbavkground.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/egg_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/favorite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/soupbackground.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/vegbackground.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/Favorites.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Favorites.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/Instructions.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Instructions.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/RandomRecipe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/Welcome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/Welcome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styling/ingredientItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styling/ingredientItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Welcome.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +91,7 @@
       <workItem from="1680422189494" duration="24500000" />
       <workItem from="1680508802683" duration="21969000" />
       <workItem from="1680634404184" duration="1077000" />
-      <workItem from="1680635572434" duration="6598000" />
+      <workItem from="1680635572434" duration="7452000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Random front end&quot;">
       <created>1679839288774</created>
