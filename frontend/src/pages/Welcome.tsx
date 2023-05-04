@@ -3,6 +3,7 @@ import '../Styling/Welcome.css';
 import axios from "axios";
 import {FavoritesListResponse, RecipeModel} from "../model/RecipeModel";
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../model/utilities';
 import addToFav from "../images/heart.png";
 import addedToFav from "../images/lover.png";
 import nextIcon from "../images/NextIcon.png";
@@ -10,9 +11,6 @@ import nextIcon from "../images/NextIcon.png";
 
 
 const Welcome = () => {
-    const baseUrl = "https://tasty-creation.azurewebsites.net/";
-     // const baseUrl = "http://localhost:8080/";
-
     const [recipe1, setRecipe1] = useState<RecipeModel>();
     const [recipe2, setRecipe2] = useState<RecipeModel>();
     const [isInFav, setIsInFav] = useState<boolean>(false);

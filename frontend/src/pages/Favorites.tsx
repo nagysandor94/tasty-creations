@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {FavoritesListResponse} from "../model/RecipeModel";
+import { baseUrl } from '../model/utilities';
 import axios from "axios";
 import {Link} from "react-router-dom";
 import addToFav from "../images/AddToFav.png";
@@ -9,8 +10,6 @@ import {wait} from "@testing-library/user-event/dist/utils";
 
 const Favorites = () => {
 
-    const baseUrl = "https://tasty-creation.azurewebsites.net/";
-    // const baseUrl = "http://localhost:8080/";
     const [favoritesList,setFavoritesList]=useState<FavoritesListResponse>();
 
     function getFavorites(){

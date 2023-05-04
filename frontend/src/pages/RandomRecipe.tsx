@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {RecipeModel} from "../model/RecipeModel";
+import { baseUrl } from '../model/utilities';
 import axios from "axios";
 import IngredientItem from "./IngredientItem";
 import Instructions from "./Instructions";
@@ -11,8 +12,6 @@ import nextIcon from "../images/NextIcon.png";
 
 
 const RandomRecipe = () => {
-    const baseUrl = "https://tasty-creation.azurewebsites.net/";
-    // const baseUrl = "http://localhost:8080/";
 
     const [recipe, setRecipe] = useState<RecipeModel>();
     const [instructionList, setInstructionList] = useState<string[]>([]);

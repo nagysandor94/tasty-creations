@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 import { IIngredients, SearchRecipeResponse } from "../model/RecipeModel";
 import '../Styling/SearchByIngredient.css';
 import '../Styling/SearchRecipe.css';
+import { baseUrl } from '../model/utilities';
 
 
 const SearchRecipe = () => {
-    const baseUrl = "https://tasty-creation.azurewebsites.net/";
-    // const baseUrl ="http://localhost:3000"
     const [search, setSearch] = useState<string>("");
     const [responseSearch, setSearchResponse] = useState<SearchRecipeResponse>();
     const [items, setItems] = useState<SearchRecipeResponse>();

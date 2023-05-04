@@ -2,12 +2,12 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IIngredients, Result } from '../model/RecipeModel';
+import { baseUrl } from '../model/utilities';
 import '../Styling/SearchByIngredient.css';
 import '../Styling/SearchRecipe.css';
 
 
 const SearchByIngredient = () => {
-    const baseUrl = "https://tasty-creation.azurewebsites.net/";
     const [newIngredient, setNewIngredient] = useState<string>("");
     const [ingredients, setIngredients] = useState<IIngredients[]>([]);
     const [responseSearch, setSearchResponse] = useState<Result[]>();

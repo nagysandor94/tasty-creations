@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { RecipeModel } from '../model/RecipeModel';
+import { baseUrl } from '../model/utilities';
 import IngredientItem from './IngredientItem';
 import Instructions from './Instructions';
 import addToFav from "../images/heart.png";
@@ -9,8 +10,7 @@ import { useParams } from 'react-router-dom';
 import "../Styling/Recipe.css"
 
 const Recipe = () => {
-    const baseUrl = "https://tasty-creation.azurewebsites.net/";
-    // const baseUrl = "http://localhost:8080/";
+
     const [recipe, setRecipe] = useState<RecipeModel>();
     const [instructionList, setInstructionList] = useState<string[]>([]);
     const [isInFav, setIsInFav] = useState<boolean>(false);
